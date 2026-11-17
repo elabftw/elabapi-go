@@ -1,0 +1,64 @@
+# Generate the Go client from an eLabFTW release, commit it on master and publish it as a tag + release.
+# Run it by hand (gh workflow run release.yml -f version=6.0.9) or from the elabftw repo after its release.
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: eLabFTW release to generate from, e.g. 6.0.9 or 6.1.0-beta
+        required: true
+
+permissions:
+  contents: write
+
+# never run two releases at once
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+env:
+  OAPI_CODEGEN_VERSION: v2.8.2
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    # the commit is pushed to master: refuse to run from another branch
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16 # v6.5.0
+        with:
+          go-version-file: go.mod
+      - name: Generate the client
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          set -euo pipefail
+          # the input is user-provided: only accept X.Y.Z or X.Y.Z-suffix
+          [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.]+)?$ ]] || { echo "invalid version: $VERSION" >&2; exit 1; }
+          # Go requires the major version in the module path for v2+
+          major="${VERSION%%.*}"
+          go mod edit -module "github.com/elabftw/elabapi-go/v${major}"
+          go run "github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@${OAPI_CODEGEN_VERSION}" \
+            -config oapi-codegen.yaml \
+            "https://github.com/elabftw/elabftw/releases/download/${VERSION}/openapi.yaml"
+          go mod tidy
+          go build .
+      - name: Commit, tag and release
+        env:
+          VERSION: ${{ inputs.version }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add client.gen.go go.mod go.sum
+          # regenerating an identical spec leaves nothing to commit
+          git diff --cached --quiet || git commit -m "release: ${VERSION}"
+          git tag "v${VERSION}"
+          # atomic: if master moved since checkout, nothing is pushed
+          git push --atomic origin HEAD:master "v${VERSION}"
+          # a version with a suffix (-beta, -alpha) is a pre-release, which is never "latest"
+          if [[ "$VERSION" == *-* ]]; then flag="--prerelease"; else flag="--latest"; fi
+          gh release create "v${VERSION}" --verify-tag --title "${VERSION}" --notes "Client generated from the eLabFTW ${VERSION} OpenAPI specification." "$flag"
