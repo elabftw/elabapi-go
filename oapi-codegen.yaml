@@ -1,6 +1,6 @@
 # Configuration for oapi-codegen, see the Dev section of README.md
 package: elabapi
-output: client.gen.go
+output: elabapi/client.gen.go
 generate:
   models: true
   client: true

@@ -20,14 +20,16 @@ go get github.com/elabftw/elabapi-go/v6@latest
 The package name is `elabapi`:
 
 ```go
-import elabapi "github.com/elabftw/elabapi-go/v6"
+import "github.com/elabftw/elabapi-go/v6/elabapi"
 ```
+
+The module is `github.com/elabftw/elabapi-go/v6` and the package lives in its `elabapi/` directory.
 
 # Dev
 
 ## Layout
 
-Everything is on `master`, including the generated `client.gen.go`: never edit it by hand, it is overwritten at each release. Go downloads module source from git tags, so the generated file has to be committed. The generator options are in `oapi-codegen.yaml`.
+Everything is on `master`, including the generated `elabapi/client.gen.go`: never edit it by hand, it is overwritten at each release. Go downloads module source from git tags, so the generated file has to be committed. The generator options are in `oapi-codegen.yaml`.
 
 ## Release
 
