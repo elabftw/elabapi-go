@@ -363,6 +363,7 @@ const (
 	PatchActionActionTimestamp           PatchActionAction = "timestamp"
 	PatchActionActionUpdate              PatchActionAction = "update"
 	PatchActionActionUpdatemetadatafield PatchActionAction = "updatemetadatafield"
+	PatchActionActionUpdateowner         PatchActionAction = "updateowner"
 )
 
 // Valid indicates whether the value is a known member of the PatchActionAction enum.
@@ -387,6 +388,8 @@ func (e PatchActionAction) Valid() bool {
 	case PatchActionActionUpdate:
 		return true
 	case PatchActionActionUpdatemetadatafield:
+		return true
+	case PatchActionActionUpdateowner:
 		return true
 	default:
 		return false
@@ -1538,61 +1541,43 @@ func (e ItemEditableCanbookBase) Valid() bool {
 
 // Defines values for MetadataExtraFieldsType.
 const (
-	MetadataExtraFieldsTypeAllowMultiValues      MetadataExtraFieldsType = "allow_multi_values"
-	MetadataExtraFieldsTypeBlankValueOnDuplicate MetadataExtraFieldsType = "blank_value_on_duplicate"
-	MetadataExtraFieldsTypeCheckbox              MetadataExtraFieldsType = "checkbox"
-	MetadataExtraFieldsTypeDate                  MetadataExtraFieldsType = "date"
-	MetadataExtraFieldsTypeDatetimeLocal         MetadataExtraFieldsType = "datetime-local"
-	MetadataExtraFieldsTypeDescription           MetadataExtraFieldsType = "description"
-	MetadataExtraFieldsTypeEmail                 MetadataExtraFieldsType = "email"
-	MetadataExtraFieldsTypeExperiments           MetadataExtraFieldsType = "experiments"
-	MetadataExtraFieldsTypeGroupId               MetadataExtraFieldsType = "group_id"
-	MetadataExtraFieldsTypeItems                 MetadataExtraFieldsType = "items"
-	MetadataExtraFieldsTypeNumber                MetadataExtraFieldsType = "number"
-	MetadataExtraFieldsTypeOptions               MetadataExtraFieldsType = "options"
-	MetadataExtraFieldsTypePosition              MetadataExtraFieldsType = "position"
-	MetadataExtraFieldsTypeRadio                 MetadataExtraFieldsType = "radio"
-	MetadataExtraFieldsTypeRequired              MetadataExtraFieldsType = "required"
-	MetadataExtraFieldsTypeSelect                MetadataExtraFieldsType = "select"
-	MetadataExtraFieldsTypeText                  MetadataExtraFieldsType = "text"
-	MetadataExtraFieldsTypeTime                  MetadataExtraFieldsType = "time"
-	MetadataExtraFieldsTypeUnit                  MetadataExtraFieldsType = "unit"
-	MetadataExtraFieldsTypeUrl                   MetadataExtraFieldsType = "url"
-	MetadataExtraFieldsTypeUsers                 MetadataExtraFieldsType = "users"
+	MetadataExtraFieldsTypeCheckbox      MetadataExtraFieldsType = "checkbox"
+	MetadataExtraFieldsTypeCompounds     MetadataExtraFieldsType = "compounds"
+	MetadataExtraFieldsTypeDate          MetadataExtraFieldsType = "date"
+	MetadataExtraFieldsTypeDatetimeLocal MetadataExtraFieldsType = "datetime-local"
+	MetadataExtraFieldsTypeEmail         MetadataExtraFieldsType = "email"
+	MetadataExtraFieldsTypeExperiments   MetadataExtraFieldsType = "experiments"
+	MetadataExtraFieldsTypeItems         MetadataExtraFieldsType = "items"
+	MetadataExtraFieldsTypeNumber        MetadataExtraFieldsType = "number"
+	MetadataExtraFieldsTypeRadio         MetadataExtraFieldsType = "radio"
+	MetadataExtraFieldsTypeSelect        MetadataExtraFieldsType = "select"
+	MetadataExtraFieldsTypeText          MetadataExtraFieldsType = "text"
+	MetadataExtraFieldsTypeTime          MetadataExtraFieldsType = "time"
+	MetadataExtraFieldsTypeUploads       MetadataExtraFieldsType = "uploads"
+	MetadataExtraFieldsTypeUrl           MetadataExtraFieldsType = "url"
+	MetadataExtraFieldsTypeUsers         MetadataExtraFieldsType = "users"
 )
 
 // Valid indicates whether the value is a known member of the MetadataExtraFieldsType enum.
 func (e MetadataExtraFieldsType) Valid() bool {
 	switch e {
-	case MetadataExtraFieldsTypeAllowMultiValues:
-		return true
-	case MetadataExtraFieldsTypeBlankValueOnDuplicate:
-		return true
 	case MetadataExtraFieldsTypeCheckbox:
+		return true
+	case MetadataExtraFieldsTypeCompounds:
 		return true
 	case MetadataExtraFieldsTypeDate:
 		return true
 	case MetadataExtraFieldsTypeDatetimeLocal:
 		return true
-	case MetadataExtraFieldsTypeDescription:
-		return true
 	case MetadataExtraFieldsTypeEmail:
 		return true
 	case MetadataExtraFieldsTypeExperiments:
-		return true
-	case MetadataExtraFieldsTypeGroupId:
 		return true
 	case MetadataExtraFieldsTypeItems:
 		return true
 	case MetadataExtraFieldsTypeNumber:
 		return true
-	case MetadataExtraFieldsTypeOptions:
-		return true
-	case MetadataExtraFieldsTypePosition:
-		return true
 	case MetadataExtraFieldsTypeRadio:
-		return true
-	case MetadataExtraFieldsTypeRequired:
 		return true
 	case MetadataExtraFieldsTypeSelect:
 		return true
@@ -1600,7 +1585,7 @@ func (e MetadataExtraFieldsType) Valid() bool {
 		return true
 	case MetadataExtraFieldsTypeTime:
 		return true
-	case MetadataExtraFieldsTypeUnit:
+	case MetadataExtraFieldsTypeUploads:
 		return true
 	case MetadataExtraFieldsTypeUrl:
 		return true
@@ -3609,6 +3594,36 @@ func (e PatchNotificationJSONBodyIsAck) Valid() bool {
 	}
 }
 
+// Defines values for H3deb588Id1.
+const (
+	H3deb588Id1Me H3deb588Id1 = "me"
+)
+
+// Valid indicates whether the value is a known member of the H3deb588Id1 enum.
+func (e H3deb588Id1) Valid() bool {
+	switch e {
+	case H3deb588Id1Me:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for H2e8b528Id1.
+const (
+	H2e8b528Id1Me H2e8b528Id1 = "me"
+)
+
+// Valid indicates whether the value is a known member of the H2e8b528Id1 enum.
+func (e H2e8b528Id1) Valid() bool {
+	switch e {
+	case H2e8b528Id1Me:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for Haae2e93Id1.
 const (
 	Haae2e93Id1Me Haae2e93Id1 = "me"
@@ -3633,6 +3648,78 @@ const (
 func (e PostEntityCompoundsLinksJSONBodyAction) Valid() bool {
 	switch e {
 	case PostEntityCompoundsLinksJSONBodyActionCreate:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for PatchContainerJSONBody0Action.
+const (
+	PatchContainerJSONBody0ActionUpdate PatchContainerJSONBody0Action = "update"
+)
+
+// Valid indicates whether the value is a known member of the PatchContainerJSONBody0Action enum.
+func (e PatchContainerJSONBody0Action) Valid() bool {
+	switch e {
+	case PatchContainerJSONBody0ActionUpdate:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for PatchContainerJSONBody1Action.
+const (
+	Destroy PatchContainerJSONBody1Action = "destroy"
+)
+
+// Valid indicates whether the value is a known member of the PatchContainerJSONBody1Action enum.
+func (e PatchContainerJSONBody1Action) Valid() bool {
+	switch e {
+	case Destroy:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for PatchContainerJSONBody1DeletionReason.
+const (
+	PatchContainerJSONBody1DeletionReasonN10  PatchContainerJSONBody1DeletionReason = 10
+	PatchContainerJSONBody1DeletionReasonN100 PatchContainerJSONBody1DeletionReason = 100
+	PatchContainerJSONBody1DeletionReasonN20  PatchContainerJSONBody1DeletionReason = 20
+	PatchContainerJSONBody1DeletionReasonN30  PatchContainerJSONBody1DeletionReason = 30
+	PatchContainerJSONBody1DeletionReasonN40  PatchContainerJSONBody1DeletionReason = 40
+	PatchContainerJSONBody1DeletionReasonN50  PatchContainerJSONBody1DeletionReason = 50
+	PatchContainerJSONBody1DeletionReasonN60  PatchContainerJSONBody1DeletionReason = 60
+	PatchContainerJSONBody1DeletionReasonN70  PatchContainerJSONBody1DeletionReason = 70
+	PatchContainerJSONBody1DeletionReasonN80  PatchContainerJSONBody1DeletionReason = 80
+	PatchContainerJSONBody1DeletionReasonN90  PatchContainerJSONBody1DeletionReason = 90
+)
+
+// Valid indicates whether the value is a known member of the PatchContainerJSONBody1DeletionReason enum.
+func (e PatchContainerJSONBody1DeletionReason) Valid() bool {
+	switch e {
+	case PatchContainerJSONBody1DeletionReasonN10:
+		return true
+	case PatchContainerJSONBody1DeletionReasonN100:
+		return true
+	case PatchContainerJSONBody1DeletionReasonN20:
+		return true
+	case PatchContainerJSONBody1DeletionReasonN30:
+		return true
+	case PatchContainerJSONBody1DeletionReasonN40:
+		return true
+	case PatchContainerJSONBody1DeletionReasonN50:
+		return true
+	case PatchContainerJSONBody1DeletionReasonN60:
+		return true
+	case PatchContainerJSONBody1DeletionReasonN70:
+		return true
+	case PatchContainerJSONBody1DeletionReasonN80:
+		return true
+	case PatchContainerJSONBody1DeletionReasonN90:
 		return true
 	default:
 		return false
@@ -4034,9 +4121,9 @@ type EntityAndItemEditable struct {
 	// Example: 1
 	Status *int `json:"status,omitempty"`
 
-	// Team Optional team context for ownership transfer.
-	// If omitted, the requester’s team is used by default.
-	// If provided, the API validates that the target user is a member of the specified team.
+	// Team Team ID of the entity.
+	// For existing entities, ownership can only be transferred through the `PatchAction`
+	// schema with `action: "updateowner"`; both `userid` and `team` are required.
 	Team *int `json:"team,omitempty"`
 
 	// Template The template id to use, or 0 to use the common team
@@ -4049,7 +4136,8 @@ type EntityAndItemEditable struct {
 	Title *string `json:"title,omitempty"`
 
 	// Userid User ID of the entity owner.
-	// When transferring ownership, the `team` field should also be provided (optional).
+	// For existing entities, ownership can only be transferred through the `PatchAction`
+	// schema with `action: "updateowner"`; both `userid` and `team` are required.
 	Userid *int `json:"userid,omitempty"`
 }
 
@@ -4134,6 +4222,18 @@ type PatchAction struct {
 	//
 	// Example: hunter2
 	Passphrase *string `json:"passphrase,omitempty"`
+
+	// Team ID of the destination team. Required when action is "updateowner". Non-admin users can only transfer ownership within their current team.
+	//
+	//
+	// Example: 5
+	Team *int `json:"team,omitempty"`
+
+	// Userid ID of the new owner. Required when action is "updateowner". The user must belong to the destination team.
+	//
+	//
+	// Example: 21
+	Userid *int `json:"userid,omitempty"`
 }
 
 // PatchActionAction defines model for PatchAction.Action.
@@ -4153,7 +4253,6 @@ type PatchActionMeaning int
 type Apikey struct {
 	CanWrite   *int    `json:"can_write,omitempty"`
 	CreatedAt  *string `json:"created_at,omitempty"`
-	Hash       *string `json:"hash,omitempty"`
 	Id         *int    `json:"id,omitempty"`
 	LastUsedAt *string `json:"last_used_at,omitempty"`
 	Name       *string `json:"name,omitempty"`
@@ -4915,7 +5014,8 @@ type Entity struct {
 	Uploads *[]Upload `json:"uploads,omitempty"`
 
 	// Userid User ID of the entity owner.
-	// When transferring ownership, the `team` field should also be provided (optional).
+	// For existing entities, ownership can only be transferred through the `PatchAction`
+	// schema with `action: "updateowner"`; both `userid` and `team` are required.
 	Userid *int `json:"userid,omitempty"`
 }
 
@@ -5042,9 +5142,9 @@ type EntityEditable struct {
 	// Example: 1
 	Status *int `json:"status,omitempty"`
 
-	// Team Optional team context for ownership transfer.
-	// If omitted, the requester’s team is used by default.
-	// If provided, the API validates that the target user is a member of the specified team.
+	// Team Team ID of the entity.
+	// For existing entities, ownership can only be transferred through the `PatchAction`
+	// schema with `action: "updateowner"`; both `userid` and `team` are required.
 	Team *int `json:"team,omitempty"`
 
 	// Template The template id to use, or 0 to use the common team
@@ -5057,7 +5157,8 @@ type EntityEditable struct {
 	Title *string `json:"title,omitempty"`
 
 	// Userid User ID of the entity owner.
-	// When transferring ownership, the `team` field should also be provided (optional).
+	// For existing entities, ownership can only be transferred through the `PatchAction`
+	// schema with `action: "updateowner"`; both `userid` and `team` are required.
 	Userid *int `json:"userid,omitempty"`
 }
 
@@ -5090,7 +5191,7 @@ type EntityEditableCanwriteBase float32
 // Example: 1
 type EntityEditableContentType int
 
-// EntityTemplate For experiments templates and items types (resources templates)
+// EntityTemplate For experiment templates and resource templates
 type EntityTemplate struct {
 	AccessKey *string `json:"access_key,omitempty"`
 
@@ -5237,7 +5338,8 @@ type EntityTemplate struct {
 	Uploads *[]Upload `json:"uploads,omitempty"`
 
 	// Userid User ID of the entity owner.
-	// When transferring ownership, the `team` field should also be provided (optional).
+	// For existing entities, ownership can only be transferred through the `PatchAction`
+	// schema with `action: "updateowner"`; both `userid` and `team` are required.
 	Userid *int `json:"userid,omitempty"`
 }
 
@@ -5358,9 +5460,9 @@ type EntityTemplateEditable struct {
 	// Example: 1
 	Status *int `json:"status,omitempty"`
 
-	// Team Optional team context for ownership transfer.
-	// If omitted, the requester’s team is used by default.
-	// If provided, the API validates that the target user is a member of the specified team.
+	// Team Team ID of the entity.
+	// For existing entities, ownership can only be transferred through the `PatchAction`
+	// schema with `action: "updateowner"`; both `userid` and `team` are required.
 	Team *int `json:"team,omitempty"`
 
 	// Template The template id to use, or 0 to use the common team
@@ -5373,7 +5475,8 @@ type EntityTemplateEditable struct {
 	Title *string `json:"title,omitempty"`
 
 	// Userid User ID of the entity owner.
-	// When transferring ownership, the `team` field should also be provided (optional).
+	// For existing entities, ownership can only be transferred through the `PatchAction`
+	// schema with `action: "updateowner"`; both `userid` and `team` are required.
 	Userid *int `json:"userid,omitempty"`
 }
 
@@ -5882,7 +5985,8 @@ type Item struct {
 	Uploads *[]Upload `json:"uploads,omitempty"`
 
 	// Userid User ID of the entity owner.
-	// When transferring ownership, the `team` field should also be provided (optional).
+	// For existing entities, ownership can only be transferred through the `PatchAction`
+	// schema with `action: "updateowner"`; both `userid` and `team` are required.
 	Userid *int `json:"userid,omitempty"`
 }
 
@@ -6043,17 +6147,57 @@ type Metadata struct {
 		} `json:"extra_fields_groups,omitempty"`
 	} `json:"elabftw,omitempty"`
 
-	// ExtraFields See https://doc.elabftw.net/docs/usage/metadata#extra-fields-objects
+	// ExtraFields See https://doc.elabftw.net/docs/usage/user-guide/custom-fields
 	ExtraFields *map[string]*struct {
-		Description *string                  `json:"description,omitempty"`
-		GroupId     *int                     `json:"group_id,omitempty"`
-		Type        *MetadataExtraFieldsType `json:"type,omitempty"`
-		Value       *string                  `json:"value,omitempty"`
+		// AllowMultiValues Allow this custom field to hold multiple values. When enabled, `value` is stored
+		// as an array. Dropdown fields use a multi-select input; all other field types use
+		// repeatable inputs. Arrays are not accepted for fields where this is `false`.
+		AllowMultiValues *bool                    `json:"allow_multi_values,omitempty"`
+		Description      *string                  `json:"description,omitempty"`
+		GroupId          *int                     `json:"group_id,omitempty"`
+		Type             *MetadataExtraFieldsType `json:"type,omitempty"`
+
+		// Value The selected or input value. Fields accept a single string or number by default.
+		// When `allow_multi_values` is `true`, the value is stored as an array of strings
+		// or numbers. An empty array represents a multi-value field with no values.
+		//
+		//
+		// Example: ["first","second"]
+		Value *Metadata_ExtraFields_Value `json:"value,omitempty"`
 	} `json:"extra_fields,omitempty"`
 }
 
 // MetadataExtraFieldsType defines model for Metadata.ExtraFields.Type.
 type MetadataExtraFieldsType string
+
+// MetadataExtraFieldsValue0 defines model for Metadata.ExtraFields.Value.0.
+type MetadataExtraFieldsValue0 = string
+
+// MetadataExtraFieldsValue1 defines model for Metadata.ExtraFields.Value.1.
+type MetadataExtraFieldsValue1 = float32
+
+// MetadataExtraFieldsValue2 defines model for Metadata.ExtraFields.Value.2.
+type MetadataExtraFieldsValue2 = []Metadata_ExtraFields_Value_2_Item
+
+// MetadataExtraFieldsValue20 defines model for Metadata.ExtraFields.Value.2.0.
+type MetadataExtraFieldsValue20 = string
+
+// MetadataExtraFieldsValue21 defines model for Metadata.ExtraFields.Value.2.1.
+type MetadataExtraFieldsValue21 = float32
+
+// Metadata_ExtraFields_Value_2_Item defines model for Metadata.ExtraFields.Value.2.Item.
+type Metadata_ExtraFields_Value_2_Item struct {
+	union json.RawMessage
+}
+
+// Metadata_ExtraFields_Value The selected or input value. Fields accept a single string or number by default.
+// When `allow_multi_values` is `true`, the value is stored as an array of strings
+// or numbers. An empty array represents a multi-value field with no values.
+//
+// Example: ["first","second"]
+type Metadata_ExtraFields_Value struct {
+	union json.RawMessage
+}
 
 // Notification defines model for notification.
 type Notification struct {
@@ -6076,6 +6220,19 @@ type Revision struct {
 	Id          *int    `json:"id,omitempty"`
 	ItemId      *int    `json:"item_id,omitempty"`
 	Userid      *int    `json:"userid,omitempty"`
+}
+
+// Ror defines model for ror.
+type Ror struct {
+	// CreatedAt Timestamp at which the ROR was associated.
+	//
+	// Example: 2026-09-11 12:49:00
+	CreatedAt string `json:"created_at"`
+
+	// Ror Research Organization Registry identifier.
+	//
+	// Example: 05kxdq627
+	Ror string `json:"ror"`
 }
 
 // Statuslike defines model for statuslike.
@@ -6105,6 +6262,14 @@ type StepIsImmutable int
 
 // StorageUnit defines model for storage_unit.
 type StorageUnit struct {
+	// Capacity Maximum number of containers this unit should hold. Null means unlimited;
+	// 0 means nothing may be stored directly in this unit, which suits a unit that
+	// exists to hold other units, such as a building or a room.
+	//
+	//
+	// Example: 96
+	Capacity *int `json:"capacity,omitempty"`
+
 	// FullPath Full hierarchical path from root to this unit
 	//
 	// Example: Building A > Room 101 > Freezer A
@@ -6125,6 +6290,15 @@ type StorageUnit struct {
 	// Example: Freezer A
 	Name *string `json:"name,omitempty"`
 
+	// Occupancy Number of containers stored directly in this unit, never counting the contents
+	// of units nested inside it. Deliberately unfiltered: a container occupies its
+	// slot whether or not you can read the entity it belongs to, and whether or not
+	// that entity is in the bin. This is the number compared against `capacity`.
+	//
+	//
+	// Example: 12
+	Occupancy *int `json:"occupancy,omitempty"`
+
 	// ParentId ID of the parent storage unit (null for root level)
 	ParentId *int `json:"parent_id,omitempty"`
 }
@@ -6142,7 +6316,11 @@ type Tag struct {
 type Team struct {
 	// Announcement Text shown on top of every page for all users of this team.
 	Announcement *string `json:"announcement,omitempty"`
-	CreatedAt    *string `json:"created_at,omitempty"`
+
+	// CaptureContainerDeletionReason Binary toggle to require a reason (deletion_reason, and deletion_comment
+	// for "other") when deleting a container of an entity owned by this team.
+	CaptureContainerDeletionReason *int    `json:"capture_container_deletion_reason,omitempty"`
+	CreatedAt                      *string `json:"created_at,omitempty"`
 
 	// ForceExpTpl Binary toggle to force usage of templates.
 	ForceExpTpl *int `json:"force_exp_tpl,omitempty"`
@@ -6163,6 +6341,24 @@ type Team struct {
 
 // TeamOnboardingEmailActive Do we send onboarding emails to new users?
 type TeamOnboardingEmailActive int
+
+// TeamRor defines model for team_ror.
+type TeamRor struct {
+	// CreatedAt Timestamp at which the ROR was associated.
+	//
+	// Example: 2026-09-11 12:49:00
+	CreatedAt string `json:"created_at"`
+
+	// Ror Research Organization Registry identifier.
+	//
+	// Example: 05kxdq627
+	Ror string `json:"ror"`
+
+	// TeamsId ID of the associated team.
+	//
+	// Example: 4
+	TeamsId int `json:"teams_id"`
+}
 
 // Teamgroup defines model for teamgroup.
 type Teamgroup struct {
@@ -6215,6 +6411,24 @@ type Upload struct {
 	Userid        *int    `json:"userid,omitempty"`
 }
 
+// UserRor defines model for user_ror.
+type UserRor struct {
+	// CreatedAt Timestamp at which the ROR was associated.
+	//
+	// Example: 2026-09-11 12:49:00
+	CreatedAt string `json:"created_at"`
+
+	// Ror Research Organization Registry identifier.
+	//
+	// Example: 05kxdq627
+	Ror string `json:"ror"`
+
+	// UsersId ID of the associated user.
+	//
+	// Example: 42
+	UsersId int `json:"users_id"`
+}
+
 // Users Response for when requester is a regular user.
 type Users struct {
 	Email     *string `json:"email,omitempty"`
@@ -6231,7 +6445,7 @@ type Users struct {
 
 // UsersFull Response for when requester has Admin privilege.
 type UsersFull struct {
-	// AuthService What mechanism was used to login, see AuthType Enum.
+	// AuthService What mechanism was used to login, see AuthMethod Enum.
 	AuthService *int `json:"auth_service,omitempty"`
 
 	// CreatedAt Account creation timestamp.
@@ -6792,7 +7006,7 @@ type PostExportJSONBody struct {
 	// Example: on
 	Experiments *string `json:"experiments,omitempty"`
 
-	// ExperimentsTemplates Set to "on" to include experiments templates in the export
+	// ExperimentsTemplates Set to "on" to include experiment templates in the export
 	//
 	// Example: on
 	ExperimentsTemplates *string `json:"experiments_templates,omitempty"`
@@ -6807,7 +7021,7 @@ type PostExportJSONBody struct {
 	// Example: on
 	Items *string `json:"items,omitempty"`
 
-	// ItemsTypes Set to "on" to include resources categories in the export
+	// ItemsTypes Set to "on" to include resource templates in the export
 	//
 	// Example: on
 	ItemsTypes *string `json:"items_types,omitempty"`
@@ -7391,7 +7605,7 @@ type GetReportsParamsScope string
 // ReadStorageUnitsParams defines parameters for ReadStorageUnits.
 type ReadStorageUnitsParams struct {
 	// Hierarchy When true, returns a flat list of all storage units in the hierarchy
-	// (id, name, parent_id, full_path, level_depth, children_count)
+	// (id, name, parent_id, full_path, capacity, occupancy, level_depth, children_count)
 	// instead of the default container assignment list.
 	Hierarchy *bool `form:"hierarchy,omitempty" json:"hierarchy,omitempty"`
 }
@@ -7559,6 +7773,13 @@ type ReadStorageUnits200JSONResponseBody0IsVpvm int
 
 // ReadStorageUnits200JSONResponseBody1 defines parameters for ReadStorageUnits.
 type ReadStorageUnits200JSONResponseBody1 = []struct {
+	// Capacity Maximum number of containers this unit should hold. Null means
+	// unlimited; 0 means nothing may be stored directly in this unit.
+	//
+	//
+	// Example: 96
+	Capacity *int `json:"capacity,omitempty"`
+
 	// ChildrenCount Number of direct children of this storage unit.
 	//
 	// Example: 3
@@ -7580,6 +7801,14 @@ type ReadStorageUnits200JSONResponseBody1 = []struct {
 	// Name Example: Freezer A
 	Name *string `json:"name,omitempty"`
 
+	// Occupancy Containers stored directly in this unit, not counting units
+	// nested inside it. Unfiltered by state or by your read access,
+	// so it is directly comparable to `capacity`.
+	//
+	//
+	// Example: 12
+	Occupancy *int `json:"occupancy,omitempty"`
+
 	// ParentId ID of parent storage unit, or null for root units.
 	ParentId *int `json:"parent_id,omitempty"`
 }
@@ -7591,6 +7820,16 @@ type ReadStorageUnits200JSONResponseBody struct {
 
 // PostStorageUnitJSONBody defines parameters for PostStorageUnit.
 type PostStorageUnitJSONBody struct {
+	// Capacity Maximum number of containers this unit should hold.
+	// Omit, or pass `null` or `""`, for unlimited (the default). Pass `0` for
+	// a unit that holds other units but never containers.
+	// Accepted as an integer or as its decimal string form, so that form
+	// submissions need no conversion. The upper bound is 4294967295.
+	//
+	//
+	// Example: 96
+	Capacity *PostStorageUnitJSONBody_Capacity `json:"capacity,omitempty"`
+
 	// Name Name of the storage unit.
 	//
 	// Example: Freezer A
@@ -7600,8 +7839,31 @@ type PostStorageUnitJSONBody struct {
 	ParentId *int `json:"parent_id,omitempty"`
 }
 
+// PostStorageUnitJSONBodyCapacity0 defines parameters for PostStorageUnit.
+type PostStorageUnitJSONBodyCapacity0 = int
+
+// PostStorageUnitJSONBodyCapacity1 defines parameters for PostStorageUnit.
+type PostStorageUnitJSONBodyCapacity1 = string
+
+// PostStorageUnitJSONBody_Capacity defines parameters for PostStorageUnit.
+type PostStorageUnitJSONBody_Capacity struct {
+	union json.RawMessage
+}
+
 // PatchStorageUnitJSONBody defines parameters for PatchStorageUnit.
 type PatchStorageUnitJSONBody struct {
+	// Capacity Maximum number of containers this unit should hold.
+	// Pass `null` or `""` for unlimited. Pass `0` for a unit that
+	// holds other units but never containers.
+	// Accepted as an integer or as its decimal string form, so that form
+	// submissions need no conversion. The upper bound is 4294967295.
+	// May be set below the current occupancy, so that an over-filled
+	// location can be declared and then drained.
+	//
+	//
+	// Example: 96
+	Capacity *PatchStorageUnitJSONBody_Capacity `json:"capacity,omitempty"`
+
 	// Name New name for the storage unit.
 	//
 	// Example: Freezer B
@@ -7613,6 +7875,17 @@ type PatchStorageUnitJSONBody struct {
 	//
 	// Example: 5
 	ParentId *int `json:"parent_id,omitempty"`
+}
+
+// PatchStorageUnitJSONBodyCapacity0 defines parameters for PatchStorageUnit.
+type PatchStorageUnitJSONBodyCapacity0 = int
+
+// PatchStorageUnitJSONBodyCapacity1 defines parameters for PatchStorageUnit.
+type PatchStorageUnitJSONBodyCapacity1 = string
+
+// PatchStorageUnitJSONBody_Capacity defines parameters for PatchStorageUnit.
+type PatchStorageUnitJSONBody_Capacity struct {
+	union json.RawMessage
 }
 
 // PostTeamsJSONBody defines parameters for PostTeams.
@@ -7889,6 +8162,18 @@ type PatchNotificationJSONBody struct {
 // PatchNotificationJSONBodyIsAck defines parameters for PatchNotification.
 type PatchNotificationJSONBodyIsAck int
 
+// H3deb588Id0 is a helper type for the shared "id" parameter of "/users/{id}/rors", prefixed with a per-path hash to disambiguate it from the same-named parameter on another path.
+type H3deb588Id0 = int
+
+// H3deb588Id1 is a helper type for the shared "id" parameter of "/users/{id}/rors", prefixed with a per-path hash to disambiguate it from the same-named parameter on another path.
+type H3deb588Id1 string
+
+// H2e8b528Id0 is a helper type for the shared "id" parameter of "/users/{id}/rors/{ror}", prefixed with a per-path hash to disambiguate it from the same-named parameter on another path.
+type H2e8b528Id0 = int
+
+// H2e8b528Id1 is a helper type for the shared "id" parameter of "/users/{id}/rors/{ror}", prefixed with a per-path hash to disambiguate it from the same-named parameter on another path.
+type H2e8b528Id1 string
+
 // Haae2e93Id0 is a helper type for the shared "id" parameter of "/users/{id}/uploads", prefixed with a per-path hash to disambiguate it from the same-named parameter on another path.
 type Haae2e93Id0 = int
 
@@ -7911,6 +8196,13 @@ type PostEntityCompoundsLinksJSONBodyAction string
 
 // PatchContainerJSONBody defines parameters for PatchContainer.
 type PatchContainerJSONBody struct {
+	union json.RawMessage
+}
+
+// PatchContainerJSONBody0 defines parameters for PatchContainer.
+type PatchContainerJSONBody0 struct {
+	Action *PatchContainerJSONBody0Action `json:"action,omitempty"`
+
 	// QtyStored New quantity stored.
 	//
 	// Example: 15
@@ -7930,6 +8222,40 @@ type PatchContainerJSONBody struct {
 	// Example: 12
 	StorageId *int `json:"storage_id,omitempty"`
 }
+
+// PatchContainerJSONBody0Action defines parameters for PatchContainer.
+type PatchContainerJSONBody0Action string
+
+// PatchContainerJSONBody1 defines parameters for PatchContainer.
+type PatchContainerJSONBody1 struct {
+	Action PatchContainerJSONBody1Action `json:"action"`
+
+	// DeletionComment Free text, accepted with any reason and required with
+	// `other` (100). Anything longer than 255 characters is
+	// rejected with a 400, not truncated, so that no audit
+	// record is silently shortened. Stored as typed.
+	//
+	//
+	// Example: spilled in transit
+	DeletionComment *string `json:"deletion_comment,omitempty"`
+
+	// DeletionReason 10 used up in authorised work, 20 no longer required,
+	// 30 consent withdrawn or use prohibited, 40 approval or
+	// retention period ended, 50 shelf life exceeded,
+	// 60 unsuitable for intended use, 70 contaminated,
+	// 80 storage or transport incident, 90 collected or
+	// registered in error, 100 other.
+	//
+	//
+	// Example: 70
+	DeletionReason *PatchContainerJSONBody1DeletionReason `json:"deletion_reason,omitempty"`
+}
+
+// PatchContainerJSONBody1Action defines parameters for PatchContainer.
+type PatchContainerJSONBody1Action string
+
+// PatchContainerJSONBody1DeletionReason defines parameters for PatchContainer.
+type PatchContainerJSONBody1DeletionReason int
 
 // PostContainerJSONBody defines parameters for PostContainer.
 type PostContainerJSONBody struct {
@@ -8281,6 +8607,156 @@ type PatchUploadJSONRequestBody PatchUploadJSONBody
 
 // PostUploadReplaceMultipartRequestBody defines body for PostUploadReplace for multipart/form-data ContentType.
 type PostUploadReplaceMultipartRequestBody PostUploadReplaceMultipartBody
+
+// AsMetadataExtraFieldsValue20 returns the union data inside the Metadata_ExtraFields_Value_2_Item as a MetadataExtraFieldsValue20
+func (t Metadata_ExtraFields_Value_2_Item) AsMetadataExtraFieldsValue20() (MetadataExtraFieldsValue20, error) {
+	var body MetadataExtraFieldsValue20
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMetadataExtraFieldsValue20 overwrites any union data inside the Metadata_ExtraFields_Value_2_Item as the provided MetadataExtraFieldsValue20
+func (t *Metadata_ExtraFields_Value_2_Item) FromMetadataExtraFieldsValue20(v MetadataExtraFieldsValue20) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeMetadataExtraFieldsValue20 performs a merge with any union data inside the Metadata_ExtraFields_Value_2_Item, using the provided MetadataExtraFieldsValue20
+func (t *Metadata_ExtraFields_Value_2_Item) MergeMetadataExtraFieldsValue20(v MetadataExtraFieldsValue20) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsMetadataExtraFieldsValue21 returns the union data inside the Metadata_ExtraFields_Value_2_Item as a MetadataExtraFieldsValue21
+func (t Metadata_ExtraFields_Value_2_Item) AsMetadataExtraFieldsValue21() (MetadataExtraFieldsValue21, error) {
+	var body MetadataExtraFieldsValue21
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMetadataExtraFieldsValue21 overwrites any union data inside the Metadata_ExtraFields_Value_2_Item as the provided MetadataExtraFieldsValue21
+func (t *Metadata_ExtraFields_Value_2_Item) FromMetadataExtraFieldsValue21(v MetadataExtraFieldsValue21) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeMetadataExtraFieldsValue21 performs a merge with any union data inside the Metadata_ExtraFields_Value_2_Item, using the provided MetadataExtraFieldsValue21
+func (t *Metadata_ExtraFields_Value_2_Item) MergeMetadataExtraFieldsValue21(v MetadataExtraFieldsValue21) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t Metadata_ExtraFields_Value_2_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *Metadata_ExtraFields_Value_2_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsMetadataExtraFieldsValue0 returns the union data inside the Metadata_ExtraFields_Value as a MetadataExtraFieldsValue0
+func (t Metadata_ExtraFields_Value) AsMetadataExtraFieldsValue0() (MetadataExtraFieldsValue0, error) {
+	var body MetadataExtraFieldsValue0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMetadataExtraFieldsValue0 overwrites any union data inside the Metadata_ExtraFields_Value as the provided MetadataExtraFieldsValue0
+func (t *Metadata_ExtraFields_Value) FromMetadataExtraFieldsValue0(v MetadataExtraFieldsValue0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeMetadataExtraFieldsValue0 performs a merge with any union data inside the Metadata_ExtraFields_Value, using the provided MetadataExtraFieldsValue0
+func (t *Metadata_ExtraFields_Value) MergeMetadataExtraFieldsValue0(v MetadataExtraFieldsValue0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsMetadataExtraFieldsValue1 returns the union data inside the Metadata_ExtraFields_Value as a MetadataExtraFieldsValue1
+func (t Metadata_ExtraFields_Value) AsMetadataExtraFieldsValue1() (MetadataExtraFieldsValue1, error) {
+	var body MetadataExtraFieldsValue1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMetadataExtraFieldsValue1 overwrites any union data inside the Metadata_ExtraFields_Value as the provided MetadataExtraFieldsValue1
+func (t *Metadata_ExtraFields_Value) FromMetadataExtraFieldsValue1(v MetadataExtraFieldsValue1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeMetadataExtraFieldsValue1 performs a merge with any union data inside the Metadata_ExtraFields_Value, using the provided MetadataExtraFieldsValue1
+func (t *Metadata_ExtraFields_Value) MergeMetadataExtraFieldsValue1(v MetadataExtraFieldsValue1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsMetadataExtraFieldsValue2 returns the union data inside the Metadata_ExtraFields_Value as a MetadataExtraFieldsValue2
+func (t Metadata_ExtraFields_Value) AsMetadataExtraFieldsValue2() (MetadataExtraFieldsValue2, error) {
+	var body MetadataExtraFieldsValue2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMetadataExtraFieldsValue2 overwrites any union data inside the Metadata_ExtraFields_Value as the provided MetadataExtraFieldsValue2
+func (t *Metadata_ExtraFields_Value) FromMetadataExtraFieldsValue2(v MetadataExtraFieldsValue2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeMetadataExtraFieldsValue2 performs a merge with any union data inside the Metadata_ExtraFields_Value, using the provided MetadataExtraFieldsValue2
+func (t *Metadata_ExtraFields_Value) MergeMetadataExtraFieldsValue2(v MetadataExtraFieldsValue2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t Metadata_ExtraFields_Value) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *Metadata_ExtraFields_Value) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
 
 // AsPatchAction returns the union data inside the PatchEntity as a PatchAction
 func (t PatchEntity) AsPatchAction() (PatchAction, error) {
@@ -9156,6 +9632,130 @@ func (t *ReadStorageUnits200JSONResponseBody) UnmarshalJSON(b []byte) error {
 	return err
 }
 
+// AsPostStorageUnitJSONBodyCapacity0 returns the union data inside the PostStorageUnitJSONBody_Capacity as a PostStorageUnitJSONBodyCapacity0
+func (t PostStorageUnitJSONBody_Capacity) AsPostStorageUnitJSONBodyCapacity0() (PostStorageUnitJSONBodyCapacity0, error) {
+	var body PostStorageUnitJSONBodyCapacity0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostStorageUnitJSONBodyCapacity0 overwrites any union data inside the PostStorageUnitJSONBody_Capacity as the provided PostStorageUnitJSONBodyCapacity0
+func (t *PostStorageUnitJSONBody_Capacity) FromPostStorageUnitJSONBodyCapacity0(v PostStorageUnitJSONBodyCapacity0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostStorageUnitJSONBodyCapacity0 performs a merge with any union data inside the PostStorageUnitJSONBody_Capacity, using the provided PostStorageUnitJSONBodyCapacity0
+func (t *PostStorageUnitJSONBody_Capacity) MergePostStorageUnitJSONBodyCapacity0(v PostStorageUnitJSONBodyCapacity0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPostStorageUnitJSONBodyCapacity1 returns the union data inside the PostStorageUnitJSONBody_Capacity as a PostStorageUnitJSONBodyCapacity1
+func (t PostStorageUnitJSONBody_Capacity) AsPostStorageUnitJSONBodyCapacity1() (PostStorageUnitJSONBodyCapacity1, error) {
+	var body PostStorageUnitJSONBodyCapacity1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPostStorageUnitJSONBodyCapacity1 overwrites any union data inside the PostStorageUnitJSONBody_Capacity as the provided PostStorageUnitJSONBodyCapacity1
+func (t *PostStorageUnitJSONBody_Capacity) FromPostStorageUnitJSONBodyCapacity1(v PostStorageUnitJSONBodyCapacity1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePostStorageUnitJSONBodyCapacity1 performs a merge with any union data inside the PostStorageUnitJSONBody_Capacity, using the provided PostStorageUnitJSONBodyCapacity1
+func (t *PostStorageUnitJSONBody_Capacity) MergePostStorageUnitJSONBodyCapacity1(v PostStorageUnitJSONBodyCapacity1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PostStorageUnitJSONBody_Capacity) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PostStorageUnitJSONBody_Capacity) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPatchStorageUnitJSONBodyCapacity0 returns the union data inside the PatchStorageUnitJSONBody_Capacity as a PatchStorageUnitJSONBodyCapacity0
+func (t PatchStorageUnitJSONBody_Capacity) AsPatchStorageUnitJSONBodyCapacity0() (PatchStorageUnitJSONBodyCapacity0, error) {
+	var body PatchStorageUnitJSONBodyCapacity0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPatchStorageUnitJSONBodyCapacity0 overwrites any union data inside the PatchStorageUnitJSONBody_Capacity as the provided PatchStorageUnitJSONBodyCapacity0
+func (t *PatchStorageUnitJSONBody_Capacity) FromPatchStorageUnitJSONBodyCapacity0(v PatchStorageUnitJSONBodyCapacity0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePatchStorageUnitJSONBodyCapacity0 performs a merge with any union data inside the PatchStorageUnitJSONBody_Capacity, using the provided PatchStorageUnitJSONBodyCapacity0
+func (t *PatchStorageUnitJSONBody_Capacity) MergePatchStorageUnitJSONBodyCapacity0(v PatchStorageUnitJSONBodyCapacity0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPatchStorageUnitJSONBodyCapacity1 returns the union data inside the PatchStorageUnitJSONBody_Capacity as a PatchStorageUnitJSONBodyCapacity1
+func (t PatchStorageUnitJSONBody_Capacity) AsPatchStorageUnitJSONBodyCapacity1() (PatchStorageUnitJSONBodyCapacity1, error) {
+	var body PatchStorageUnitJSONBodyCapacity1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPatchStorageUnitJSONBodyCapacity1 overwrites any union data inside the PatchStorageUnitJSONBody_Capacity as the provided PatchStorageUnitJSONBodyCapacity1
+func (t *PatchStorageUnitJSONBody_Capacity) FromPatchStorageUnitJSONBodyCapacity1(v PatchStorageUnitJSONBodyCapacity1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePatchStorageUnitJSONBodyCapacity1 performs a merge with any union data inside the PatchStorageUnitJSONBody_Capacity, using the provided PatchStorageUnitJSONBodyCapacity1
+func (t *PatchStorageUnitJSONBody_Capacity) MergePatchStorageUnitJSONBodyCapacity1(v PatchStorageUnitJSONBodyCapacity1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PatchStorageUnitJSONBody_Capacity) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PatchStorageUnitJSONBody_Capacity) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
 // AsTeam returns the union data inside the PatchTeamJSONBody as a Team
 func (t PatchTeamJSONBody) AsTeam() (Team, error) {
 	var body Team
@@ -9504,6 +10104,68 @@ func (t PatchUserJSONBody) MarshalJSON() ([]byte, error) {
 }
 
 func (t *PatchUserJSONBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsPatchContainerJSONBody0 returns the union data inside the PatchContainerJSONBody as a PatchContainerJSONBody0
+func (t PatchContainerJSONBody) AsPatchContainerJSONBody0() (PatchContainerJSONBody0, error) {
+	var body PatchContainerJSONBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPatchContainerJSONBody0 overwrites any union data inside the PatchContainerJSONBody as the provided PatchContainerJSONBody0
+func (t *PatchContainerJSONBody) FromPatchContainerJSONBody0(v PatchContainerJSONBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePatchContainerJSONBody0 performs a merge with any union data inside the PatchContainerJSONBody, using the provided PatchContainerJSONBody0
+func (t *PatchContainerJSONBody) MergePatchContainerJSONBody0(v PatchContainerJSONBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPatchContainerJSONBody1 returns the union data inside the PatchContainerJSONBody as a PatchContainerJSONBody1
+func (t PatchContainerJSONBody) AsPatchContainerJSONBody1() (PatchContainerJSONBody1, error) {
+	var body PatchContainerJSONBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPatchContainerJSONBody1 overwrites any union data inside the PatchContainerJSONBody as the provided PatchContainerJSONBody1
+func (t *PatchContainerJSONBody) FromPatchContainerJSONBody1(v PatchContainerJSONBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePatchContainerJSONBody1 performs a merge with any union data inside the PatchContainerJSONBody, using the provided PatchContainerJSONBody1
+func (t *PatchContainerJSONBody) MergePatchContainerJSONBody1(v PatchContainerJSONBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t PatchContainerJSONBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *PatchContainerJSONBody) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -10358,6 +11020,21 @@ type ClientInterface interface {
 	// Corresponds with POST /instance/branding/{id} (the `PostInstanceBranding` operationId).
 	PostInstanceBrandingWithBody(ctx context.Context, id H12ad2e6Id, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// ReadInstanceRors Read all RORs associated with the instance.
+	//
+	// Corresponds with GET /instance/rors (the `ReadInstanceRors` operationId).
+	ReadInstanceRors(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DeleteInstanceRor Remove a ROR from the instance. Requires Sysadmin permissions.
+	//
+	// Corresponds with DELETE /instance/rors/{ror} (the `DeleteInstanceRor` operationId).
+	DeleteInstanceRor(ctx context.Context, ror string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PostInstanceRor Associate a ROR with the instance. Requires Sysadmin permissions.
+	//
+	// Corresponds with POST /instance/rors/{ror} (the `PostInstanceRor` operationId).
+	PostInstanceRor(ctx context.Context, ror string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// ReadItems Read all items that are accessible
 	//
 	// Corresponds with GET /items (the `ReadItems` operationId).
@@ -10487,7 +11164,7 @@ type ClientInterface interface {
 	//
 	// Without parameters, returns the full list of containers (assignments of experiments or resources to storage locations) that you have access to.
 	//
-	// With `?hierarchy=true`, returns a flat list of all storage units (freezers, boxes, positions, etc.) with their hierarchy metadata (`id`, `name`, `parent_id`, `full_path`, `level_depth`, `children_count`). This allows clients to discover, traverse, or display the storage unit tree.
+	// With `?hierarchy=true`, returns a flat list of all storage units (freezers, boxes, positions, etc.) with their hierarchy metadata (`id`, `name`, `parent_id`, `full_path`, `capacity`, `occupancy`, `level_depth`, `children_count`). This allows clients to discover, traverse, or display the storage unit tree.
 	//
 	// Corresponds with GET /storage_units (the `ReadStorageUnits` operationId).
 	ReadStorageUnits(ctx context.Context, params *ReadStorageUnitsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -10527,7 +11204,7 @@ type ClientInterface interface {
 
 	// PatchStorageUnitWithBody Modify a storage unit.
 	//
-	// Update the name and/or the parent of a storage unit. Setting
+	// Update the name, the capacity and/or the parent of a storage unit. Setting
 	// `parent_id` reparents the unit (and everything under it) in place.
 	// Pass `parent_id: null` to move the unit to the root. Requires
 	// permission to manage inventory locations.
@@ -10539,7 +11216,7 @@ type ClientInterface interface {
 
 	// PatchStorageUnit Modify a storage unit.
 	//
-	// Update the name and/or the parent of a storage unit. Setting
+	// Update the name, the capacity and/or the parent of a storage unit. Setting
 	// `parent_id` reparents the unit (and everything under it) in place.
 	// Pass `parent_id: null` to move the unit to the root. Requires
 	// permission to manage inventory locations.
@@ -10593,7 +11270,7 @@ type ClientInterface interface {
 		union json.RawMessage
 	}, body PatchTeamJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ReadTeamExperimentsCategories Read experiments categories of a team.
+	// ReadTeamExperimentsCategories Read experiment categories of a team.
 	//
 	// Corresponds with GET /teams/{id}/experiments_categories (the `ReadTeamExperimentsCategories` operationId).
 	ReadTeamExperimentsCategories(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -10636,19 +11313,19 @@ type ClientInterface interface {
 	// Corresponds with PATCH /teams/{id}/experiments_categories/{subid} (the `PatchExpcat` operationId).
 	PatchExpcat(ctx context.Context, id int, subid int, body PatchExpcatJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ReadTeamExperimentsStatus Read experiments status of a team.
+	// ReadTeamExperimentsStatus Read experiment status of a team.
 	//
 	// Corresponds with GET /teams/{id}/experiments_status (the `ReadTeamExperimentsStatus` operationId).
 	ReadTeamExperimentsStatus(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// PostTeamOneExpstatusWithBody Create a new experiments status.
+	// PostTeamOneExpstatusWithBody Create a new experiment status.
 	//
 	// Takes any type of body and a specified content type.
 	//
 	// Corresponds with POST /teams/{id}/experiments_status (the `PostTeamOneExpstatus` operationId).
 	PostTeamOneExpstatusWithBody(ctx context.Context, id int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// PostTeamOneExpstatus Create a new experiments status.
+	// PostTeamOneExpstatus Create a new experiment status.
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -10679,7 +11356,7 @@ type ClientInterface interface {
 	// Corresponds with PATCH /teams/{id}/experiments_status/{subid} (the `PatchExpstatus` operationId).
 	PatchExpstatus(ctx context.Context, id int, subid int, body PatchExpstatusJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ReadTeamItemsStatus Read resources status of a team.
+	// ReadTeamItemsStatus Read resource status of a team.
 	//
 	// Corresponds with GET /teams/{id}/items_status (the `ReadTeamItemsStatus` operationId).
 	ReadTeamItemsStatus(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -10722,7 +11399,7 @@ type ClientInterface interface {
 	// Corresponds with PATCH /teams/{id}/items_status/{subid} (the `PatchResstatus` operationId).
 	PatchResstatus(ctx context.Context, id int, subid int, body PatchResstatusJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ReadTeamResourcesCategories Read resources categories of a team.
+	// ReadTeamResourcesCategories Read resource categories of a team.
 	//
 	// Corresponds with GET /teams/{id}/resources_categories (the `ReadTeamResourcesCategories` operationId).
 	ReadTeamResourcesCategories(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -10764,6 +11441,21 @@ type ClientInterface interface {
 	//
 	// Corresponds with PATCH /teams/{id}/resources_categories/{subid} (the `PatchRescat` operationId).
 	PatchRescat(ctx context.Context, id int, subid int, body PatchRescatJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ReadTeamRors Read all RORs associated with a team.
+	//
+	// Corresponds with GET /teams/{id}/rors (the `ReadTeamRors` operationId).
+	ReadTeamRors(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DeleteTeamRor Remove a ROR from a team. Requires write access to the team.
+	//
+	// Corresponds with DELETE /teams/{id}/rors/{ror} (the `DeleteTeamRor` operationId).
+	DeleteTeamRor(ctx context.Context, id int, ror string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PostTeamRor Associate a ROR with a team. Requires write access to the team.
+	//
+	// Corresponds with POST /teams/{id}/rors/{ror} (the `PostTeamRor` operationId).
+	PostTeamRor(ctx context.Context, id int, ror string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// ReadTeamTags Read all tags for the team.
 	//
@@ -10996,6 +11688,27 @@ type ClientInterface interface {
 		union json.RawMessage
 	}, subid int, body PatchNotificationJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// ReadUserRors Read all RORs associated with a user.
+	//
+	// Corresponds with GET /users/{id}/rors (the `ReadUserRors` operationId).
+	ReadUserRors(ctx context.Context, id struct {
+		union json.RawMessage
+	}, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DeleteUserRor Remove a ROR from a user. Requires Admin permissions for the user.
+	//
+	// Corresponds with DELETE /users/{id}/rors/{ror} (the `DeleteUserRor` operationId).
+	DeleteUserRor(ctx context.Context, id struct {
+		union json.RawMessage
+	}, ror string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PostUserRor Associate a ROR with a user. Requires Admin permissions for the user.
+	//
+	// Corresponds with POST /users/{id}/rors/{ror} (the `PostUserRor` operationId).
+	PostUserRor(ctx context.Context, id struct {
+		union json.RawMessage
+	}, ror string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// ReadUserUploads Read attached files from a user
 	//
 	// Corresponds with GET /users/{id}/uploads (the `ReadUserUploads` operationId).
@@ -11083,7 +11796,12 @@ type ClientInterface interface {
 
 	// DeleteContainer Delete a container.
 	//
-	// Remove an entity from a storage unit.
+	// Remove an entity from a storage unit. Takes no body: when the team that
+	// owns the entity has `capture_container_deletion_reason` enabled, this
+	// returns 400 and the `PATCH` variant must be used instead.
+	//
+	// A container that does not exist returns 404, so a deletion that removed
+	// nothing is never reported as a success.
 	//
 	// Corresponds with DELETE /{entity_type}/{id}/containers/{subid} (the `DeleteContainer` operationId).
 	DeleteContainer(ctx context.Context, entityType string, id int, subid int, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -11095,22 +11813,46 @@ type ClientInterface interface {
 	// Corresponds with GET /{entity_type}/{id}/containers/{subid} (the `ReadContainer` operationId).
 	ReadContainer(ctx context.Context, entityType string, id int, subid int, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// PatchContainerWithBody Modify a container.
+	// PatchContainerWithBody Modify a container, or delete one giving a reason.
 	//
-	// Update the quantity stored, the unit, or the storage location of a
-	// container. Setting `storage_id` moves the container to a different
-	// storage unit while preserving its `id` and `created_at`.
+	// With `action: update` (the default), update the quantity stored, the unit,
+	// or the storage location of a container. Setting `storage_id` moves the
+	// container to a different storage unit while preserving its `id` and
+	// `created_at`.
+	//
+	// A move is rejected with `400` if the destination has a `capacity` and is
+	// already full. Moving a container out of a full location is always allowed,
+	// and moving it to where it already is remains a no-op.
+	//
+	// With `action: destroy`, remove the container `subid`. This is the way to
+	// delete when the team that owns the entity has
+	// `capture_container_deletion_reason` enabled: a
+	// `deletion_reason` is then mandatory, and so is a `deletion_comment` when the
+	// reason is `other` (100). The reason is recorded in the changelog of the
+	// parent entity. Otherwise, use `DELETE`, which takes no body.
 	//
 	// Takes any type of body and a specified content type.
 	//
 	// Corresponds with PATCH /{entity_type}/{id}/containers/{subid} (the `PatchContainer` operationId).
 	PatchContainerWithBody(ctx context.Context, entityType string, id int, subid int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// PatchContainer Modify a container.
+	// PatchContainer Modify a container, or delete one giving a reason.
 	//
-	// Update the quantity stored, the unit, or the storage location of a
-	// container. Setting `storage_id` moves the container to a different
-	// storage unit while preserving its `id` and `created_at`.
+	// With `action: update` (the default), update the quantity stored, the unit,
+	// or the storage location of a container. Setting `storage_id` moves the
+	// container to a different storage unit while preserving its `id` and
+	// `created_at`.
+	//
+	// A move is rejected with `400` if the destination has a `capacity` and is
+	// already full. Moving a container out of a full location is always allowed,
+	// and moving it to where it already is remains a no-op.
+	//
+	// With `action: destroy`, remove the container `subid`. This is the way to
+	// delete when the team that owns the entity has
+	// `capture_container_deletion_reason` enabled: a
+	// `deletion_reason` is then mandatory, and so is a `deletion_comment` when the
+	// reason is `other` (100). The reason is recorded in the changelog of the
+	// parent entity. Otherwise, use `DELETE`, which takes no body.
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -11121,6 +11863,10 @@ type ClientInterface interface {
 	//
 	// Store this entity in a storage unit with a specified quantity.
 	//
+	// Rejected with `400` if the storage unit has a `capacity` and already holds
+	// that many containers. Containers of binned entities still occupy their slot,
+	// as binning a record does not empty a freezer.
+	//
 	// Takes any type of body and a specified content type.
 	//
 	// Corresponds with POST /{entity_type}/{id}/containers/{subid} (the `PostContainer` operationId).
@@ -11130,12 +11876,16 @@ type ClientInterface interface {
 	//
 	// Store this entity in a storage unit with a specified quantity.
 	//
+	// Rejected with `400` if the storage unit has a `capacity` and already holds
+	// that many containers. Containers of binned entities still occupy their slot,
+	// as binning a record does not empty a freezer.
+	//
 	// Takes a body of the `application/json` content type.
 	//
 	// Corresponds with POST /{entity_type}/{id}/containers/{subid} (the `PostContainer` operationId).
 	PostContainer(ctx context.Context, entityType string, id int, subid int, body PostContainerJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ReadEntityExperimentsLinks Read all experiments links of that entity.
+	// ReadEntityExperimentsLinks Read all experiment links of that entity.
 	//
 	// Corresponds with GET /{entity_type}/{id}/experiments_links (the `ReadEntityExperimentsLinks` operationId).
 	ReadEntityExperimentsLinks(ctx context.Context, entityType string, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -12732,6 +13482,51 @@ func (c *Client) PostInstanceBrandingWithBody(ctx context.Context, id H12ad2e6Id
 	return c.Client.Do(req)
 }
 
+// ReadInstanceRors Read all RORs associated with the instance.
+//
+// Corresponds with GET /instance/rors (the `ReadInstanceRors` operationId).
+func (c *Client) ReadInstanceRors(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewReadInstanceRorsRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// DeleteInstanceRor Remove a ROR from the instance. Requires Sysadmin permissions.
+//
+// Corresponds with DELETE /instance/rors/{ror} (the `DeleteInstanceRor` operationId).
+func (c *Client) DeleteInstanceRor(ctx context.Context, ror string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeleteInstanceRorRequest(c.Server, ror)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PostInstanceRor Associate a ROR with the instance. Requires Sysadmin permissions.
+//
+// Corresponds with POST /instance/rors/{ror} (the `PostInstanceRor` operationId).
+func (c *Client) PostInstanceRor(ctx context.Context, ror string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostInstanceRorRequest(c.Server, ror)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // ReadItems Read all items that are accessible
 //
 // Corresponds with GET /items (the `ReadItems` operationId).
@@ -13051,7 +13846,7 @@ func (c *Client) GetReports(ctx context.Context, params *GetReportsParams, reqEd
 //
 // Without parameters, returns the full list of containers (assignments of experiments or resources to storage locations) that you have access to.
 //
-// With `?hierarchy=true`, returns a flat list of all storage units (freezers, boxes, positions, etc.) with their hierarchy metadata (`id`, `name`, `parent_id`, `full_path`, `level_depth`, `children_count`). This allows clients to discover, traverse, or display the storage unit tree.
+// With `?hierarchy=true`, returns a flat list of all storage units (freezers, boxes, positions, etc.) with their hierarchy metadata (`id`, `name`, `parent_id`, `full_path`, `capacity`, `occupancy`, `level_depth`, `children_count`). This allows clients to discover, traverse, or display the storage unit tree.
 //
 // Corresponds with GET /storage_units (the `ReadStorageUnits` operationId).
 func (c *Client) ReadStorageUnits(ctx context.Context, params *ReadStorageUnitsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -13141,7 +13936,7 @@ func (c *Client) ReadStorageUnit(ctx context.Context, id int, reqEditors ...Requ
 
 // PatchStorageUnitWithBody Modify a storage unit.
 //
-// Update the name and/or the parent of a storage unit. Setting
+// Update the name, the capacity and/or the parent of a storage unit. Setting
 // `parent_id` reparents the unit (and everything under it) in place.
 // Pass `parent_id: null` to move the unit to the root. Requires
 // permission to manage inventory locations.
@@ -13163,7 +13958,7 @@ func (c *Client) PatchStorageUnitWithBody(ctx context.Context, id int, contentTy
 
 // PatchStorageUnit Modify a storage unit.
 //
-// Update the name and/or the parent of a storage unit. Setting
+// Update the name, the capacity and/or the parent of a storage unit. Setting
 // `parent_id` reparents the unit (and everything under it) in place.
 // Pass `parent_id: null` to move the unit to the root. Requires
 // permission to manage inventory locations.
@@ -13287,7 +14082,7 @@ func (c *Client) PatchTeam(ctx context.Context, id struct {
 	return c.Client.Do(req)
 }
 
-// ReadTeamExperimentsCategories Read experiments categories of a team.
+// ReadTeamExperimentsCategories Read experiment categories of a team.
 //
 // Corresponds with GET /teams/{id}/experiments_categories (the `ReadTeamExperimentsCategories` operationId).
 func (c *Client) ReadTeamExperimentsCategories(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -13400,7 +14195,7 @@ func (c *Client) PatchExpcat(ctx context.Context, id int, subid int, body PatchE
 	return c.Client.Do(req)
 }
 
-// ReadTeamExperimentsStatus Read experiments status of a team.
+// ReadTeamExperimentsStatus Read experiment status of a team.
 //
 // Corresponds with GET /teams/{id}/experiments_status (the `ReadTeamExperimentsStatus` operationId).
 func (c *Client) ReadTeamExperimentsStatus(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -13415,7 +14210,7 @@ func (c *Client) ReadTeamExperimentsStatus(ctx context.Context, id int, reqEdito
 	return c.Client.Do(req)
 }
 
-// PostTeamOneExpstatusWithBody Create a new experiments status.
+// PostTeamOneExpstatusWithBody Create a new experiment status.
 //
 // Takes any type of body and a specified content type.
 //
@@ -13432,7 +14227,7 @@ func (c *Client) PostTeamOneExpstatusWithBody(ctx context.Context, id int, conte
 	return c.Client.Do(req)
 }
 
-// PostTeamOneExpstatus Create a new experiments status.
+// PostTeamOneExpstatus Create a new experiment status.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -13513,7 +14308,7 @@ func (c *Client) PatchExpstatus(ctx context.Context, id int, subid int, body Pat
 	return c.Client.Do(req)
 }
 
-// ReadTeamItemsStatus Read resources status of a team.
+// ReadTeamItemsStatus Read resource status of a team.
 //
 // Corresponds with GET /teams/{id}/items_status (the `ReadTeamItemsStatus` operationId).
 func (c *Client) ReadTeamItemsStatus(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -13626,7 +14421,7 @@ func (c *Client) PatchResstatus(ctx context.Context, id int, subid int, body Pat
 	return c.Client.Do(req)
 }
 
-// ReadTeamResourcesCategories Read resources categories of a team.
+// ReadTeamResourcesCategories Read resource categories of a team.
 //
 // Corresponds with GET /teams/{id}/resources_categories (the `ReadTeamResourcesCategories` operationId).
 func (c *Client) ReadTeamResourcesCategories(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -13729,6 +14524,51 @@ func (c *Client) PatchRescatWithBody(ctx context.Context, id int, subid int, con
 // Corresponds with PATCH /teams/{id}/resources_categories/{subid} (the `PatchRescat` operationId).
 func (c *Client) PatchRescat(ctx context.Context, id int, subid int, body PatchRescatJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewPatchRescatRequest(c.Server, id, subid, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// ReadTeamRors Read all RORs associated with a team.
+//
+// Corresponds with GET /teams/{id}/rors (the `ReadTeamRors` operationId).
+func (c *Client) ReadTeamRors(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewReadTeamRorsRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// DeleteTeamRor Remove a ROR from a team. Requires write access to the team.
+//
+// Corresponds with DELETE /teams/{id}/rors/{ror} (the `DeleteTeamRor` operationId).
+func (c *Client) DeleteTeamRor(ctx context.Context, id int, ror string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeleteTeamRorRequest(c.Server, id, ror)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PostTeamRor Associate a ROR with a team. Requires write access to the team.
+//
+// Corresponds with POST /teams/{id}/rors/{ror} (the `PostTeamRor` operationId).
+func (c *Client) PostTeamRor(ctx context.Context, id int, ror string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostTeamRorRequest(c.Server, id, ror)
 	if err != nil {
 		return nil, err
 	}
@@ -14300,6 +15140,57 @@ func (c *Client) PatchNotification(ctx context.Context, id struct {
 	return c.Client.Do(req)
 }
 
+// ReadUserRors Read all RORs associated with a user.
+//
+// Corresponds with GET /users/{id}/rors (the `ReadUserRors` operationId).
+func (c *Client) ReadUserRors(ctx context.Context, id struct {
+	union json.RawMessage
+}, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewReadUserRorsRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// DeleteUserRor Remove a ROR from a user. Requires Admin permissions for the user.
+//
+// Corresponds with DELETE /users/{id}/rors/{ror} (the `DeleteUserRor` operationId).
+func (c *Client) DeleteUserRor(ctx context.Context, id struct {
+	union json.RawMessage
+}, ror string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeleteUserRorRequest(c.Server, id, ror)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PostUserRor Associate a ROR with a user. Requires Admin permissions for the user.
+//
+// Corresponds with POST /users/{id}/rors/{ror} (the `PostUserRor` operationId).
+func (c *Client) PostUserRor(ctx context.Context, id struct {
+	union json.RawMessage
+}, ror string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostUserRorRequest(c.Server, id, ror)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // ReadUserUploads Read attached files from a user
 //
 // Corresponds with GET /users/{id}/uploads (the `ReadUserUploads` operationId).
@@ -14517,7 +15408,12 @@ func (c *Client) ReadContainers(ctx context.Context, entityType string, id int, 
 
 // DeleteContainer Delete a container.
 //
-// Remove an entity from a storage unit.
+// Remove an entity from a storage unit. Takes no body: when the team that
+// owns the entity has `capture_container_deletion_reason` enabled, this
+// returns 400 and the `PATCH` variant must be used instead.
+//
+// A container that does not exist returns 404, so a deletion that removed
+// nothing is never reported as a success.
 //
 // Corresponds with DELETE /{entity_type}/{id}/containers/{subid} (the `DeleteContainer` operationId).
 func (c *Client) DeleteContainer(ctx context.Context, entityType string, id int, subid int, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -14549,11 +15445,23 @@ func (c *Client) ReadContainer(ctx context.Context, entityType string, id int, s
 	return c.Client.Do(req)
 }
 
-// PatchContainerWithBody Modify a container.
+// PatchContainerWithBody Modify a container, or delete one giving a reason.
 //
-// Update the quantity stored, the unit, or the storage location of a
-// container. Setting `storage_id` moves the container to a different
-// storage unit while preserving its `id` and `created_at`.
+// With `action: update` (the default), update the quantity stored, the unit,
+// or the storage location of a container. Setting `storage_id` moves the
+// container to a different storage unit while preserving its `id` and
+// `created_at`.
+//
+// A move is rejected with `400` if the destination has a `capacity` and is
+// already full. Moving a container out of a full location is always allowed,
+// and moving it to where it already is remains a no-op.
+//
+// With `action: destroy`, remove the container `subid`. This is the way to
+// delete when the team that owns the entity has
+// `capture_container_deletion_reason` enabled: a
+// `deletion_reason` is then mandatory, and so is a `deletion_comment` when the
+// reason is `other` (100). The reason is recorded in the changelog of the
+// parent entity. Otherwise, use `DELETE`, which takes no body.
 //
 // Takes any type of body and a specified content type.
 //
@@ -14570,11 +15478,23 @@ func (c *Client) PatchContainerWithBody(ctx context.Context, entityType string, 
 	return c.Client.Do(req)
 }
 
-// PatchContainer Modify a container.
+// PatchContainer Modify a container, or delete one giving a reason.
 //
-// Update the quantity stored, the unit, or the storage location of a
-// container. Setting `storage_id` moves the container to a different
-// storage unit while preserving its `id` and `created_at`.
+// With `action: update` (the default), update the quantity stored, the unit,
+// or the storage location of a container. Setting `storage_id` moves the
+// container to a different storage unit while preserving its `id` and
+// `created_at`.
+//
+// A move is rejected with `400` if the destination has a `capacity` and is
+// already full. Moving a container out of a full location is always allowed,
+// and moving it to where it already is remains a no-op.
+//
+// With `action: destroy`, remove the container `subid`. This is the way to
+// delete when the team that owns the entity has
+// `capture_container_deletion_reason` enabled: a
+// `deletion_reason` is then mandatory, and so is a `deletion_comment` when the
+// reason is `other` (100). The reason is recorded in the changelog of the
+// parent entity. Otherwise, use `DELETE`, which takes no body.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -14595,6 +15515,10 @@ func (c *Client) PatchContainer(ctx context.Context, entityType string, id int, 
 //
 // Store this entity in a storage unit with a specified quantity.
 //
+// Rejected with `400` if the storage unit has a `capacity` and already holds
+// that many containers. Containers of binned entities still occupy their slot,
+// as binning a record does not empty a freezer.
+//
 // Takes any type of body and a specified content type.
 //
 // Corresponds with POST /{entity_type}/{id}/containers/{subid} (the `PostContainer` operationId).
@@ -14614,6 +15538,10 @@ func (c *Client) PostContainerWithBody(ctx context.Context, entityType string, i
 //
 // Store this entity in a storage unit with a specified quantity.
 //
+// Rejected with `400` if the storage unit has a `capacity` and already holds
+// that many containers. Containers of binned entities still occupy their slot,
+// as binning a record does not empty a freezer.
+//
 // Takes a body of the `application/json` content type.
 //
 // Corresponds with POST /{entity_type}/{id}/containers/{subid} (the `PostContainer` operationId).
@@ -14629,7 +15557,7 @@ func (c *Client) PostContainer(ctx context.Context, entityType string, id int, s
 	return c.Client.Do(req)
 }
 
-// ReadEntityExperimentsLinks Read all experiments links of that entity.
+// ReadEntityExperimentsLinks Read all experiment links of that entity.
 //
 // Corresponds with GET /{entity_type}/{id}/experiments_links (the `ReadEntityExperimentsLinks` operationId).
 func (c *Client) ReadEntityExperimentsLinks(ctx context.Context, entityType string, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -17974,6 +18902,101 @@ func NewPostInstanceBrandingRequestWithBody(server string, id H12ad2e6Id, conten
 	return req, nil
 }
 
+// NewReadInstanceRorsRequest constructs an http.Request for the ReadInstanceRors method
+func NewReadInstanceRorsRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/instance/rors")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewDeleteInstanceRorRequest constructs an http.Request for the DeleteInstanceRor method
+func NewDeleteInstanceRorRequest(server string, ror string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "ror", ror, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/instance/rors/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostInstanceRorRequest constructs an http.Request for the PostInstanceRor method
+func NewPostInstanceRorRequest(server string, ror string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "ror", ror, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/instance/rors/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewReadItemsRequest constructs an http.Request for the ReadItems method
 func NewReadItemsRequest(server string, params *ReadItemsParams) (*http.Request, error) {
 	var err error
@@ -20218,6 +21241,122 @@ func NewPatchRescatRequestWithBody(server string, id int, subid int, contentType
 	return req, nil
 }
 
+// NewReadTeamRorsRequest constructs an http.Request for the ReadTeamRors method
+func NewReadTeamRorsRequest(server string, id int) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/teams/%s/rors", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewDeleteTeamRorRequest constructs an http.Request for the DeleteTeamRor method
+func NewDeleteTeamRorRequest(server string, id int, ror string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "ror", ror, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/teams/%s/rors/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostTeamRorRequest constructs an http.Request for the PostTeamRor method
+func NewPostTeamRorRequest(server string, id int, ror string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "integer", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "ror", ror, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/teams/%s/rors/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewReadTeamTagsRequest constructs an http.Request for the ReadTeamTags method
 func NewReadTeamTagsRequest(server string, id int) (*http.Request, error) {
 	var err error
@@ -21274,6 +22413,128 @@ func NewPatchNotificationRequestWithBody(server string, id struct {
 	}
 
 	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewReadUserRorsRequest constructs an http.Request for the ReadUserRors method
+func NewReadUserRorsRequest(server string, id struct {
+	union json.RawMessage
+}) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/users/%s/rors", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewDeleteUserRorRequest constructs an http.Request for the DeleteUserRor method
+func NewDeleteUserRorRequest(server string, id struct {
+	union json.RawMessage
+}, ror string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "ror", ror, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/users/%s/rors/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostUserRorRequest constructs an http.Request for the PostUserRor method
+func NewPostUserRorRequest(server string, id struct {
+	union json.RawMessage
+}, ror string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "ror", ror, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/users/%s/rors/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
 
 	return req, nil
 }
@@ -23916,6 +25177,27 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /instance/branding/{id} (the `PostInstanceBranding` operationId).
 	PostInstanceBrandingWithBodyWithResponse(ctx context.Context, id H12ad2e6Id, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostInstanceBrandingResponse, error)
 
+	// ReadInstanceRorsWithResponse Read all RORs associated with the instance.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /instance/rors (the `ReadInstanceRors` operationId).
+	ReadInstanceRorsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ReadInstanceRorsResponse, error)
+
+	// DeleteInstanceRorWithResponse Remove a ROR from the instance. Requires Sysadmin permissions.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /instance/rors/{ror} (the `DeleteInstanceRor` operationId).
+	DeleteInstanceRorWithResponse(ctx context.Context, ror string, reqEditors ...RequestEditorFn) (*DeleteInstanceRorResponse, error)
+
+	// PostInstanceRorWithResponse Associate a ROR with the instance. Requires Sysadmin permissions.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /instance/rors/{ror} (the `PostInstanceRor` operationId).
+	PostInstanceRorWithResponse(ctx context.Context, ror string, reqEditors ...RequestEditorFn) (*PostInstanceRorResponse, error)
+
 	// ReadItemsWithResponse Read all items that are accessible
 	//
 	// Returns a wrapper object for the known response body format(s).
@@ -24059,7 +25341,7 @@ type ClientWithResponsesInterface interface {
 	//
 	// Without parameters, returns the full list of containers (assignments of experiments or resources to storage locations) that you have access to.
 	//
-	// With `?hierarchy=true`, returns a flat list of all storage units (freezers, boxes, positions, etc.) with their hierarchy metadata (`id`, `name`, `parent_id`, `full_path`, `level_depth`, `children_count`). This allows clients to discover, traverse, or display the storage unit tree.
+	// With `?hierarchy=true`, returns a flat list of all storage units (freezers, boxes, positions, etc.) with their hierarchy metadata (`id`, `name`, `parent_id`, `full_path`, `capacity`, `occupancy`, `level_depth`, `children_count`). This allows clients to discover, traverse, or display the storage unit tree.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -24105,7 +25387,7 @@ type ClientWithResponsesInterface interface {
 
 	// PatchStorageUnitWithBodyWithResponse Modify a storage unit.
 	//
-	// Update the name and/or the parent of a storage unit. Setting
+	// Update the name, the capacity and/or the parent of a storage unit. Setting
 	// `parent_id` reparents the unit (and everything under it) in place.
 	// Pass `parent_id: null` to move the unit to the root. Requires
 	// permission to manage inventory locations.
@@ -24117,7 +25399,7 @@ type ClientWithResponsesInterface interface {
 
 	// PatchStorageUnitWithResponse Modify a storage unit.
 	//
-	// Update the name and/or the parent of a storage unit. Setting
+	// Update the name, the capacity and/or the parent of a storage unit. Setting
 	// `parent_id` reparents the unit (and everything under it) in place.
 	// Pass `parent_id: null` to move the unit to the root. Requires
 	// permission to manage inventory locations.
@@ -24175,7 +25457,7 @@ type ClientWithResponsesInterface interface {
 		union json.RawMessage
 	}, body PatchTeamJSONRequestBody, reqEditors ...RequestEditorFn) (*PatchTeamResponse, error)
 
-	// ReadTeamExperimentsCategoriesWithResponse Read experiments categories of a team.
+	// ReadTeamExperimentsCategoriesWithResponse Read experiment categories of a team.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -24224,21 +25506,21 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /teams/{id}/experiments_categories/{subid} (the `PatchExpcat` operationId).
 	PatchExpcatWithResponse(ctx context.Context, id int, subid int, body PatchExpcatJSONRequestBody, reqEditors ...RequestEditorFn) (*PatchExpcatResponse, error)
 
-	// ReadTeamExperimentsStatusWithResponse Read experiments status of a team.
+	// ReadTeamExperimentsStatusWithResponse Read experiment status of a team.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /teams/{id}/experiments_status (the `ReadTeamExperimentsStatus` operationId).
 	ReadTeamExperimentsStatusWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*ReadTeamExperimentsStatusResponse, error)
 
-	// PostTeamOneExpstatusWithBodyWithResponse Create a new experiments status.
+	// PostTeamOneExpstatusWithBodyWithResponse Create a new experiment status.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /teams/{id}/experiments_status (the `PostTeamOneExpstatus` operationId).
 	PostTeamOneExpstatusWithBodyWithResponse(ctx context.Context, id int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostTeamOneExpstatusResponse, error)
 
-	// PostTeamOneExpstatusWithResponse Create a new experiments status.
+	// PostTeamOneExpstatusWithResponse Create a new experiment status.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -24273,7 +25555,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /teams/{id}/experiments_status/{subid} (the `PatchExpstatus` operationId).
 	PatchExpstatusWithResponse(ctx context.Context, id int, subid int, body PatchExpstatusJSONRequestBody, reqEditors ...RequestEditorFn) (*PatchExpstatusResponse, error)
 
-	// ReadTeamItemsStatusWithResponse Read resources status of a team.
+	// ReadTeamItemsStatusWithResponse Read resource status of a team.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -24322,7 +25604,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PATCH /teams/{id}/items_status/{subid} (the `PatchResstatus` operationId).
 	PatchResstatusWithResponse(ctx context.Context, id int, subid int, body PatchResstatusJSONRequestBody, reqEditors ...RequestEditorFn) (*PatchResstatusResponse, error)
 
-	// ReadTeamResourcesCategoriesWithResponse Read resources categories of a team.
+	// ReadTeamResourcesCategoriesWithResponse Read resource categories of a team.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -24370,6 +25652,27 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with PATCH /teams/{id}/resources_categories/{subid} (the `PatchRescat` operationId).
 	PatchRescatWithResponse(ctx context.Context, id int, subid int, body PatchRescatJSONRequestBody, reqEditors ...RequestEditorFn) (*PatchRescatResponse, error)
+
+	// ReadTeamRorsWithResponse Read all RORs associated with a team.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /teams/{id}/rors (the `ReadTeamRors` operationId).
+	ReadTeamRorsWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*ReadTeamRorsResponse, error)
+
+	// DeleteTeamRorWithResponse Remove a ROR from a team. Requires write access to the team.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /teams/{id}/rors/{ror} (the `DeleteTeamRor` operationId).
+	DeleteTeamRorWithResponse(ctx context.Context, id int, ror string, reqEditors ...RequestEditorFn) (*DeleteTeamRorResponse, error)
+
+	// PostTeamRorWithResponse Associate a ROR with a team. Requires write access to the team.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /teams/{id}/rors/{ror} (the `PostTeamRor` operationId).
+	PostTeamRorWithResponse(ctx context.Context, id int, ror string, reqEditors ...RequestEditorFn) (*PostTeamRorResponse, error)
 
 	// ReadTeamTagsWithResponse Read all tags for the team.
 	//
@@ -24632,6 +25935,33 @@ type ClientWithResponsesInterface interface {
 		union json.RawMessage
 	}, subid int, body PatchNotificationJSONRequestBody, reqEditors ...RequestEditorFn) (*PatchNotificationResponse, error)
 
+	// ReadUserRorsWithResponse Read all RORs associated with a user.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /users/{id}/rors (the `ReadUserRors` operationId).
+	ReadUserRorsWithResponse(ctx context.Context, id struct {
+		union json.RawMessage
+	}, reqEditors ...RequestEditorFn) (*ReadUserRorsResponse, error)
+
+	// DeleteUserRorWithResponse Remove a ROR from a user. Requires Admin permissions for the user.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /users/{id}/rors/{ror} (the `DeleteUserRor` operationId).
+	DeleteUserRorWithResponse(ctx context.Context, id struct {
+		union json.RawMessage
+	}, ror string, reqEditors ...RequestEditorFn) (*DeleteUserRorResponse, error)
+
+	// PostUserRorWithResponse Associate a ROR with a user. Requires Admin permissions for the user.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /users/{id}/rors/{ror} (the `PostUserRor` operationId).
+	PostUserRorWithResponse(ctx context.Context, id struct {
+		union json.RawMessage
+	}, ror string, reqEditors ...RequestEditorFn) (*PostUserRorResponse, error)
+
 	// ReadUserUploadsWithResponse Read attached files from a user
 	//
 	// Returns a wrapper object for the known response body format(s).
@@ -24733,7 +26063,12 @@ type ClientWithResponsesInterface interface {
 
 	// DeleteContainerWithResponse Delete a container.
 	//
-	// Remove an entity from a storage unit.
+	// Remove an entity from a storage unit. Takes no body: when the team that
+	// owns the entity has `capture_container_deletion_reason` enabled, this
+	// returns 400 and the `PATCH` variant must be used instead.
+	//
+	// A container that does not exist returns 404, so a deletion that removed
+	// nothing is never reported as a success.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -24749,22 +26084,46 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /{entity_type}/{id}/containers/{subid} (the `ReadContainer` operationId).
 	ReadContainerWithResponse(ctx context.Context, entityType string, id int, subid int, reqEditors ...RequestEditorFn) (*ReadContainerResponse, error)
 
-	// PatchContainerWithBodyWithResponse Modify a container.
+	// PatchContainerWithBodyWithResponse Modify a container, or delete one giving a reason.
 	//
-	// Update the quantity stored, the unit, or the storage location of a
-	// container. Setting `storage_id` moves the container to a different
-	// storage unit while preserving its `id` and `created_at`.
+	// With `action: update` (the default), update the quantity stored, the unit,
+	// or the storage location of a container. Setting `storage_id` moves the
+	// container to a different storage unit while preserving its `id` and
+	// `created_at`.
+	//
+	// A move is rejected with `400` if the destination has a `capacity` and is
+	// already full. Moving a container out of a full location is always allowed,
+	// and moving it to where it already is remains a no-op.
+	//
+	// With `action: destroy`, remove the container `subid`. This is the way to
+	// delete when the team that owns the entity has
+	// `capture_container_deletion_reason` enabled: a
+	// `deletion_reason` is then mandatory, and so is a `deletion_comment` when the
+	// reason is `other` (100). The reason is recorded in the changelog of the
+	// parent entity. Otherwise, use `DELETE`, which takes no body.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with PATCH /{entity_type}/{id}/containers/{subid} (the `PatchContainer` operationId).
 	PatchContainerWithBodyWithResponse(ctx context.Context, entityType string, id int, subid int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PatchContainerResponse, error)
 
-	// PatchContainerWithResponse Modify a container.
+	// PatchContainerWithResponse Modify a container, or delete one giving a reason.
 	//
-	// Update the quantity stored, the unit, or the storage location of a
-	// container. Setting `storage_id` moves the container to a different
-	// storage unit while preserving its `id` and `created_at`.
+	// With `action: update` (the default), update the quantity stored, the unit,
+	// or the storage location of a container. Setting `storage_id` moves the
+	// container to a different storage unit while preserving its `id` and
+	// `created_at`.
+	//
+	// A move is rejected with `400` if the destination has a `capacity` and is
+	// already full. Moving a container out of a full location is always allowed,
+	// and moving it to where it already is remains a no-op.
+	//
+	// With `action: destroy`, remove the container `subid`. This is the way to
+	// delete when the team that owns the entity has
+	// `capture_container_deletion_reason` enabled: a
+	// `deletion_reason` is then mandatory, and so is a `deletion_comment` when the
+	// reason is `other` (100). The reason is recorded in the changelog of the
+	// parent entity. Otherwise, use `DELETE`, which takes no body.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -24775,6 +26134,10 @@ type ClientWithResponsesInterface interface {
 	//
 	// Store this entity in a storage unit with a specified quantity.
 	//
+	// Rejected with `400` if the storage unit has a `capacity` and already holds
+	// that many containers. Containers of binned entities still occupy their slot,
+	// as binning a record does not empty a freezer.
+	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /{entity_type}/{id}/containers/{subid} (the `PostContainer` operationId).
@@ -24784,12 +26147,16 @@ type ClientWithResponsesInterface interface {
 	//
 	// Store this entity in a storage unit with a specified quantity.
 	//
+	// Rejected with `400` if the storage unit has a `capacity` and already holds
+	// that many containers. Containers of binned entities still occupy their slot,
+	// as binning a record does not empty a freezer.
+	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /{entity_type}/{id}/containers/{subid} (the `PostContainer` operationId).
 	PostContainerWithResponse(ctx context.Context, entityType string, id int, subid int, body PostContainerJSONRequestBody, reqEditors ...RequestEditorFn) (*PostContainerResponse, error)
 
-	// ReadEntityExperimentsLinksWithResponse Read all experiments links of that entity.
+	// ReadEntityExperimentsLinksWithResponse Read all experiment links of that entity.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -28440,6 +29807,171 @@ func (r PostInstanceBrandingResponse) ContentType() string {
 	return ""
 }
 
+type ReadInstanceRorsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *[]Ror
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *Unauthorized
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ReadInstanceRorsResponse) GetJSON200() *[]Ror {
+	return r.JSON200
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r ReadInstanceRorsResponse) GetJSON401() *Unauthorized {
+	return r.JSON401
+}
+
+// GetBody returns the raw response body bytes
+func (r ReadInstanceRorsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ReadInstanceRorsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ReadInstanceRorsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ReadInstanceRorsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type DeleteInstanceRorResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *BadRequest
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *Unauthorized
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *Forbidden
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r DeleteInstanceRorResponse) GetJSON400() *BadRequest {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r DeleteInstanceRorResponse) GetJSON401() *Unauthorized {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r DeleteInstanceRorResponse) GetJSON403() *Forbidden {
+	return r.JSON403
+}
+
+// GetBody returns the raw response body bytes
+func (r DeleteInstanceRorResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r DeleteInstanceRorResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DeleteInstanceRorResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r DeleteInstanceRorResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// PostInstanceRorResponse201Headers the declared response headers of an HTTP 201 response for PostInstanceRor
+type PostInstanceRorResponse201Headers struct {
+	Location *string
+}
+
+type PostInstanceRorResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *BadRequest
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *Unauthorized
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *Forbidden
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *PostInstanceRorResponse201Headers
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r PostInstanceRorResponse) GetJSON400() *BadRequest {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r PostInstanceRorResponse) GetJSON401() *Unauthorized {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r PostInstanceRorResponse) GetJSON403() *Forbidden {
+	return r.JSON403
+}
+
+// GetBody returns the raw response body bytes
+func (r PostInstanceRorResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r PostInstanceRorResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r PostInstanceRorResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r PostInstanceRorResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type ReadItemsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -30809,6 +32341,192 @@ func (r PatchRescatResponse) ContentType() string {
 	return ""
 }
 
+type ReadTeamRorsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *[]TeamRor
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *Unauthorized
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *NotFound
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ReadTeamRorsResponse) GetJSON200() *[]TeamRor {
+	return r.JSON200
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r ReadTeamRorsResponse) GetJSON401() *Unauthorized {
+	return r.JSON401
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r ReadTeamRorsResponse) GetJSON404() *NotFound {
+	return r.JSON404
+}
+
+// GetBody returns the raw response body bytes
+func (r ReadTeamRorsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ReadTeamRorsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ReadTeamRorsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ReadTeamRorsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type DeleteTeamRorResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *BadRequest
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *Unauthorized
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *Forbidden
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *NotFound
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r DeleteTeamRorResponse) GetJSON400() *BadRequest {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r DeleteTeamRorResponse) GetJSON401() *Unauthorized {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r DeleteTeamRorResponse) GetJSON403() *Forbidden {
+	return r.JSON403
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r DeleteTeamRorResponse) GetJSON404() *NotFound {
+	return r.JSON404
+}
+
+// GetBody returns the raw response body bytes
+func (r DeleteTeamRorResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r DeleteTeamRorResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DeleteTeamRorResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r DeleteTeamRorResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// PostTeamRorResponse201Headers the declared response headers of an HTTP 201 response for PostTeamRor
+type PostTeamRorResponse201Headers struct {
+	Location *string
+}
+
+type PostTeamRorResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *BadRequest
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *Unauthorized
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *Forbidden
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *NotFound
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *PostTeamRorResponse201Headers
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r PostTeamRorResponse) GetJSON400() *BadRequest {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r PostTeamRorResponse) GetJSON401() *Unauthorized {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r PostTeamRorResponse) GetJSON403() *Forbidden {
+	return r.JSON403
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r PostTeamRorResponse) GetJSON404() *NotFound {
+	return r.JSON404
+}
+
+// GetBody returns the raw response body bytes
+func (r PostTeamRorResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r PostTeamRorResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r PostTeamRorResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r PostTeamRorResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type ReadTeamTagsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -32179,6 +33897,192 @@ func (r PatchNotificationResponse) ContentType() string {
 	return ""
 }
 
+type ReadUserRorsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *[]UserRor
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *Unauthorized
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *NotFound
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ReadUserRorsResponse) GetJSON200() *[]UserRor {
+	return r.JSON200
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r ReadUserRorsResponse) GetJSON401() *Unauthorized {
+	return r.JSON401
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r ReadUserRorsResponse) GetJSON404() *NotFound {
+	return r.JSON404
+}
+
+// GetBody returns the raw response body bytes
+func (r ReadUserRorsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ReadUserRorsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ReadUserRorsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ReadUserRorsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type DeleteUserRorResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *BadRequest
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *Unauthorized
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *Forbidden
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *NotFound
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r DeleteUserRorResponse) GetJSON400() *BadRequest {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r DeleteUserRorResponse) GetJSON401() *Unauthorized {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r DeleteUserRorResponse) GetJSON403() *Forbidden {
+	return r.JSON403
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r DeleteUserRorResponse) GetJSON404() *NotFound {
+	return r.JSON404
+}
+
+// GetBody returns the raw response body bytes
+func (r DeleteUserRorResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r DeleteUserRorResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DeleteUserRorResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r DeleteUserRorResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// PostUserRorResponse201Headers the declared response headers of an HTTP 201 response for PostUserRor
+type PostUserRorResponse201Headers struct {
+	Location *string
+}
+
+type PostUserRorResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *BadRequest
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *Unauthorized
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *Forbidden
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *NotFound
+	// Headers201 the parsed response headers for an HTTP 201 response
+	Headers201 *PostUserRorResponse201Headers
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r PostUserRorResponse) GetJSON400() *BadRequest {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r PostUserRorResponse) GetJSON401() *Unauthorized {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r PostUserRorResponse) GetJSON403() *Forbidden {
+	return r.JSON403
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r PostUserRorResponse) GetJSON404() *NotFound {
+	return r.JSON404
+}
+
+// GetBody returns the raw response body bytes
+func (r PostUserRorResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r PostUserRorResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r PostUserRorResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r PostUserRorResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type ReadUserUploadsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -32797,10 +34701,17 @@ func (r ReadContainersResponse) ContentType() string {
 type DeleteContainerResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *BadRequest
 	// JSON401 the response for an HTTP 401 `application/json` response
 	JSON401 *Unauthorized
 	// JSON404 the response for an HTTP 404 `application/json` response
 	JSON404 *NotFound
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r DeleteContainerResponse) GetJSON400() *BadRequest {
+	return r.JSON400
 }
 
 // GetJSON401 returns the response for an HTTP 401 `application/json` response
@@ -35523,6 +37434,45 @@ func (c *ClientWithResponses) PostInstanceBrandingWithBodyWithResponse(ctx conte
 	return ParsePostInstanceBrandingResponse(rsp)
 }
 
+// ReadInstanceRorsWithResponse Read all RORs associated with the instance.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /instance/rors (the `ReadInstanceRors` operationId).
+func (c *ClientWithResponses) ReadInstanceRorsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ReadInstanceRorsResponse, error) {
+	rsp, err := c.ReadInstanceRors(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseReadInstanceRorsResponse(rsp)
+}
+
+// DeleteInstanceRorWithResponse Remove a ROR from the instance. Requires Sysadmin permissions.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /instance/rors/{ror} (the `DeleteInstanceRor` operationId).
+func (c *ClientWithResponses) DeleteInstanceRorWithResponse(ctx context.Context, ror string, reqEditors ...RequestEditorFn) (*DeleteInstanceRorResponse, error) {
+	rsp, err := c.DeleteInstanceRor(ctx, ror, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeleteInstanceRorResponse(rsp)
+}
+
+// PostInstanceRorWithResponse Associate a ROR with the instance. Requires Sysadmin permissions.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /instance/rors/{ror} (the `PostInstanceRor` operationId).
+func (c *ClientWithResponses) PostInstanceRorWithResponse(ctx context.Context, ror string, reqEditors ...RequestEditorFn) (*PostInstanceRorResponse, error) {
+	rsp, err := c.PostInstanceRor(ctx, ror, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostInstanceRorResponse(rsp)
+}
+
 // ReadItemsWithResponse Read all items that are accessible
 //
 // Returns a wrapper object for the known response body format(s).
@@ -35780,7 +37730,7 @@ func (c *ClientWithResponses) GetReportsWithResponse(ctx context.Context, params
 //
 // Without parameters, returns the full list of containers (assignments of experiments or resources to storage locations) that you have access to.
 //
-// With `?hierarchy=true`, returns a flat list of all storage units (freezers, boxes, positions, etc.) with their hierarchy metadata (`id`, `name`, `parent_id`, `full_path`, `level_depth`, `children_count`). This allows clients to discover, traverse, or display the storage unit tree.
+// With `?hierarchy=true`, returns a flat list of all storage units (freezers, boxes, positions, etc.) with their hierarchy metadata (`id`, `name`, `parent_id`, `full_path`, `capacity`, `occupancy`, `level_depth`, `children_count`). This allows clients to discover, traverse, or display the storage unit tree.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -35856,7 +37806,7 @@ func (c *ClientWithResponses) ReadStorageUnitWithResponse(ctx context.Context, i
 
 // PatchStorageUnitWithBodyWithResponse Modify a storage unit.
 //
-// Update the name and/or the parent of a storage unit. Setting
+// Update the name, the capacity and/or the parent of a storage unit. Setting
 // `parent_id` reparents the unit (and everything under it) in place.
 // Pass `parent_id: null` to move the unit to the root. Requires
 // permission to manage inventory locations.
@@ -35874,7 +37824,7 @@ func (c *ClientWithResponses) PatchStorageUnitWithBodyWithResponse(ctx context.C
 
 // PatchStorageUnitWithResponse Modify a storage unit.
 //
-// Update the name and/or the parent of a storage unit. Setting
+// Update the name, the capacity and/or the parent of a storage unit. Setting
 // `parent_id` reparents the unit (and everything under it) in place.
 // Pass `parent_id: null` to move the unit to the root. Requires
 // permission to manage inventory locations.
@@ -35974,7 +37924,7 @@ func (c *ClientWithResponses) PatchTeamWithResponse(ctx context.Context, id stru
 	return ParsePatchTeamResponse(rsp)
 }
 
-// ReadTeamExperimentsCategoriesWithResponse Read experiments categories of a team.
+// ReadTeamExperimentsCategoriesWithResponse Read experiment categories of a team.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -36065,7 +38015,7 @@ func (c *ClientWithResponses) PatchExpcatWithResponse(ctx context.Context, id in
 	return ParsePatchExpcatResponse(rsp)
 }
 
-// ReadTeamExperimentsStatusWithResponse Read experiments status of a team.
+// ReadTeamExperimentsStatusWithResponse Read experiment status of a team.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -36078,7 +38028,7 @@ func (c *ClientWithResponses) ReadTeamExperimentsStatusWithResponse(ctx context.
 	return ParseReadTeamExperimentsStatusResponse(rsp)
 }
 
-// PostTeamOneExpstatusWithBodyWithResponse Create a new experiments status.
+// PostTeamOneExpstatusWithBodyWithResponse Create a new experiment status.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -36091,7 +38041,7 @@ func (c *ClientWithResponses) PostTeamOneExpstatusWithBodyWithResponse(ctx conte
 	return ParsePostTeamOneExpstatusResponse(rsp)
 }
 
-// PostTeamOneExpstatusWithResponse Create a new experiments status.
+// PostTeamOneExpstatusWithResponse Create a new experiment status.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -36156,7 +38106,7 @@ func (c *ClientWithResponses) PatchExpstatusWithResponse(ctx context.Context, id
 	return ParsePatchExpstatusResponse(rsp)
 }
 
-// ReadTeamItemsStatusWithResponse Read resources status of a team.
+// ReadTeamItemsStatusWithResponse Read resource status of a team.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -36247,7 +38197,7 @@ func (c *ClientWithResponses) PatchResstatusWithResponse(ctx context.Context, id
 	return ParsePatchResstatusResponse(rsp)
 }
 
-// ReadTeamResourcesCategoriesWithResponse Read resources categories of a team.
+// ReadTeamResourcesCategoriesWithResponse Read resource categories of a team.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -36336,6 +38286,45 @@ func (c *ClientWithResponses) PatchRescatWithResponse(ctx context.Context, id in
 		return nil, err
 	}
 	return ParsePatchRescatResponse(rsp)
+}
+
+// ReadTeamRorsWithResponse Read all RORs associated with a team.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /teams/{id}/rors (the `ReadTeamRors` operationId).
+func (c *ClientWithResponses) ReadTeamRorsWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*ReadTeamRorsResponse, error) {
+	rsp, err := c.ReadTeamRors(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseReadTeamRorsResponse(rsp)
+}
+
+// DeleteTeamRorWithResponse Remove a ROR from a team. Requires write access to the team.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /teams/{id}/rors/{ror} (the `DeleteTeamRor` operationId).
+func (c *ClientWithResponses) DeleteTeamRorWithResponse(ctx context.Context, id int, ror string, reqEditors ...RequestEditorFn) (*DeleteTeamRorResponse, error) {
+	rsp, err := c.DeleteTeamRor(ctx, id, ror, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeleteTeamRorResponse(rsp)
+}
+
+// PostTeamRorWithResponse Associate a ROR with a team. Requires write access to the team.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /teams/{id}/rors/{ror} (the `PostTeamRor` operationId).
+func (c *ClientWithResponses) PostTeamRorWithResponse(ctx context.Context, id int, ror string, reqEditors ...RequestEditorFn) (*PostTeamRorResponse, error) {
+	rsp, err := c.PostTeamRor(ctx, id, ror, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostTeamRorResponse(rsp)
 }
 
 // ReadTeamTagsWithResponse Read all tags for the team.
@@ -36797,6 +38786,51 @@ func (c *ClientWithResponses) PatchNotificationWithResponse(ctx context.Context,
 	return ParsePatchNotificationResponse(rsp)
 }
 
+// ReadUserRorsWithResponse Read all RORs associated with a user.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /users/{id}/rors (the `ReadUserRors` operationId).
+func (c *ClientWithResponses) ReadUserRorsWithResponse(ctx context.Context, id struct {
+	union json.RawMessage
+}, reqEditors ...RequestEditorFn) (*ReadUserRorsResponse, error) {
+	rsp, err := c.ReadUserRors(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseReadUserRorsResponse(rsp)
+}
+
+// DeleteUserRorWithResponse Remove a ROR from a user. Requires Admin permissions for the user.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /users/{id}/rors/{ror} (the `DeleteUserRor` operationId).
+func (c *ClientWithResponses) DeleteUserRorWithResponse(ctx context.Context, id struct {
+	union json.RawMessage
+}, ror string, reqEditors ...RequestEditorFn) (*DeleteUserRorResponse, error) {
+	rsp, err := c.DeleteUserRor(ctx, id, ror, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeleteUserRorResponse(rsp)
+}
+
+// PostUserRorWithResponse Associate a ROR with a user. Requires Admin permissions for the user.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /users/{id}/rors/{ror} (the `PostUserRor` operationId).
+func (c *ClientWithResponses) PostUserRorWithResponse(ctx context.Context, id struct {
+	union json.RawMessage
+}, ror string, reqEditors ...RequestEditorFn) (*PostUserRorResponse, error) {
+	rsp, err := c.PostUserRor(ctx, id, ror, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostUserRorResponse(rsp)
+}
+
 // ReadUserUploadsWithResponse Read attached files from a user
 //
 // Returns a wrapper object for the known response body format(s).
@@ -36976,7 +39010,12 @@ func (c *ClientWithResponses) ReadContainersWithResponse(ctx context.Context, en
 
 // DeleteContainerWithResponse Delete a container.
 //
-// Remove an entity from a storage unit.
+// Remove an entity from a storage unit. Takes no body: when the team that
+// owns the entity has `capture_container_deletion_reason` enabled, this
+// returns 400 and the `PATCH` variant must be used instead.
+//
+// A container that does not exist returns 404, so a deletion that removed
+// nothing is never reported as a success.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -37004,11 +39043,23 @@ func (c *ClientWithResponses) ReadContainerWithResponse(ctx context.Context, ent
 	return ParseReadContainerResponse(rsp)
 }
 
-// PatchContainerWithBodyWithResponse Modify a container.
+// PatchContainerWithBodyWithResponse Modify a container, or delete one giving a reason.
 //
-// Update the quantity stored, the unit, or the storage location of a
-// container. Setting `storage_id` moves the container to a different
-// storage unit while preserving its `id` and `created_at`.
+// With `action: update` (the default), update the quantity stored, the unit,
+// or the storage location of a container. Setting `storage_id` moves the
+// container to a different storage unit while preserving its `id` and
+// `created_at`.
+//
+// A move is rejected with `400` if the destination has a `capacity` and is
+// already full. Moving a container out of a full location is always allowed,
+// and moving it to where it already is remains a no-op.
+//
+// With `action: destroy`, remove the container `subid`. This is the way to
+// delete when the team that owns the entity has
+// `capture_container_deletion_reason` enabled: a
+// `deletion_reason` is then mandatory, and so is a `deletion_comment` when the
+// reason is `other` (100). The reason is recorded in the changelog of the
+// parent entity. Otherwise, use `DELETE`, which takes no body.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -37021,11 +39072,23 @@ func (c *ClientWithResponses) PatchContainerWithBodyWithResponse(ctx context.Con
 	return ParsePatchContainerResponse(rsp)
 }
 
-// PatchContainerWithResponse Modify a container.
+// PatchContainerWithResponse Modify a container, or delete one giving a reason.
 //
-// Update the quantity stored, the unit, or the storage location of a
-// container. Setting `storage_id` moves the container to a different
-// storage unit while preserving its `id` and `created_at`.
+// With `action: update` (the default), update the quantity stored, the unit,
+// or the storage location of a container. Setting `storage_id` moves the
+// container to a different storage unit while preserving its `id` and
+// `created_at`.
+//
+// A move is rejected with `400` if the destination has a `capacity` and is
+// already full. Moving a container out of a full location is always allowed,
+// and moving it to where it already is remains a no-op.
+//
+// With `action: destroy`, remove the container `subid`. This is the way to
+// delete when the team that owns the entity has
+// `capture_container_deletion_reason` enabled: a
+// `deletion_reason` is then mandatory, and so is a `deletion_comment` when the
+// reason is `other` (100). The reason is recorded in the changelog of the
+// parent entity. Otherwise, use `DELETE`, which takes no body.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -37042,6 +39105,10 @@ func (c *ClientWithResponses) PatchContainerWithResponse(ctx context.Context, en
 //
 // Store this entity in a storage unit with a specified quantity.
 //
+// Rejected with `400` if the storage unit has a `capacity` and already holds
+// that many containers. Containers of binned entities still occupy their slot,
+// as binning a record does not empty a freezer.
+//
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
 // Corresponds with POST /{entity_type}/{id}/containers/{subid} (the `PostContainer` operationId).
@@ -37057,6 +39124,10 @@ func (c *ClientWithResponses) PostContainerWithBodyWithResponse(ctx context.Cont
 //
 // Store this entity in a storage unit with a specified quantity.
 //
+// Rejected with `400` if the storage unit has a `capacity` and already holds
+// that many containers. Containers of binned entities still occupy their slot,
+// as binning a record does not empty a freezer.
+//
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
 // Corresponds with POST /{entity_type}/{id}/containers/{subid} (the `PostContainer` operationId).
@@ -37068,7 +39139,7 @@ func (c *ClientWithResponses) PostContainerWithResponse(ctx context.Context, ent
 	return ParsePostContainerResponse(rsp)
 }
 
-// ReadEntityExperimentsLinksWithResponse Read all experiments links of that entity.
+// ReadEntityExperimentsLinksWithResponse Read all experiment links of that entity.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -40166,6 +42237,138 @@ func ParsePostInstanceBrandingResponse(rsp *http.Response) (*PostInstanceBrandin
 	return response, nil
 }
 
+// ParseReadInstanceRorsResponse parses an HTTP response from a ReadInstanceRorsWithResponse call
+func ParseReadInstanceRorsResponse(rsp *http.Response) (*ReadInstanceRorsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ReadInstanceRorsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest []Ror
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeleteInstanceRorResponse parses an HTTP response from a DeleteInstanceRorWithResponse call
+func ParseDeleteInstanceRorResponse(rsp *http.Response) (*DeleteInstanceRorResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeleteInstanceRorResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case rsp.StatusCode == 204:
+		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostInstanceRorResponse parses an HTTP response from a PostInstanceRorWithResponse call
+func ParsePostInstanceRorResponse(rsp *http.Response) (*PostInstanceRorResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostInstanceRorResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers PostInstanceRorResponse201Headers
+		if values := rsp.Header.Values("location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
 // ParseReadItemsResponse parses an HTTP response from a ReadItemsWithResponse call
 func ParseReadItemsResponse(rsp *http.Response) (*ReadItemsResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -42014,6 +44217,159 @@ func ParsePatchRescatResponse(rsp *http.Response) (*PatchRescatResponse, error) 
 	return response, nil
 }
 
+// ParseReadTeamRorsResponse parses an HTTP response from a ReadTeamRorsWithResponse call
+func ParseReadTeamRorsResponse(rsp *http.Response) (*ReadTeamRorsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ReadTeamRorsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest []TeamRor
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeleteTeamRorResponse parses an HTTP response from a DeleteTeamRorWithResponse call
+func ParseDeleteTeamRorResponse(rsp *http.Response) (*DeleteTeamRorResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeleteTeamRorResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case rsp.StatusCode == 204:
+		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostTeamRorResponse parses an HTTP response from a PostTeamRorWithResponse call
+func ParsePostTeamRorResponse(rsp *http.Response) (*PostTeamRorResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostTeamRorResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers PostTeamRorResponse201Headers
+		if values := rsp.Header.Values("location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
 // ParseReadTeamTagsResponse parses an HTTP response from a ReadTeamTagsWithResponse call
 func ParseReadTeamTagsResponse(rsp *http.Response) (*ReadTeamTagsResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -43061,6 +45417,159 @@ func ParsePatchNotificationResponse(rsp *http.Response) (*PatchNotificationRespo
 	return response, nil
 }
 
+// ParseReadUserRorsResponse parses an HTTP response from a ReadUserRorsWithResponse call
+func ParseReadUserRorsResponse(rsp *http.Response) (*ReadUserRorsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ReadUserRorsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest []UserRor
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeleteUserRorResponse parses an HTTP response from a DeleteUserRorWithResponse call
+func ParseDeleteUserRorResponse(rsp *http.Response) (*DeleteUserRorResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeleteUserRorResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case rsp.StatusCode == 204:
+		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePostUserRorResponse parses an HTTP response from a PostUserRorWithResponse call
+func ParsePostUserRorResponse(rsp *http.Response) (*PostUserRorResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostUserRorResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 201:
+		var headers PostUserRorResponse201Headers
+		if values := rsp.Header.Values("location"); len(values) > 0 {
+			var value string
+			if err := runtime.BindStyledParameterWithOptions("simple", "location", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.Location = &value
+		}
+		response.Headers201 = &headers
+	}
+
+	return response, nil
+}
+
 // ParseReadUserUploadsResponse parses an HTTP response from a ReadUserUploadsWithResponse call
 func ParseReadUserUploadsResponse(rsp *http.Response) (*ReadUserUploadsResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -43537,6 +46046,13 @@ func ParseDeleteContainerResponse(rsp *http.Response) (*DeleteContainerResponse,
 	switch {
 	case rsp.StatusCode == 204:
 		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
 		var dest Unauthorized

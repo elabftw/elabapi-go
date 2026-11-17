@@ -21,21 +21,11 @@ import "github.com/elabftw/elabapi-go"
 
 # Dev
 
-## Get the OpenAPI specification
-
-Download the `openapi.yaml` file attached to an eLabFTW release (here 5.6.15):
-
-```bash
-curl -fsSL -o openapi.yaml https://github.com/elabftw/elabftw/releases/download/5.6.15/openapi.yaml
-```
-
-Note: the 5.6.15 specification has an invalid type that oapi-codegen rejects. After downloading, replace `type: int` with `type: integer` for the `source` property of the `idp` schema.
-
 ## Generate the library
 
-The options for the generator are in `oapi-codegen.yaml`. It is run with `go run` so its dependencies are not added to `go.mod`.
+The options for the generator are in `oapi-codegen.yaml`. It is run with `go run` so its dependencies are not added to `go.mod`. The OpenAPI specification is read directly from the eLabFTW release on GitHub (here 6.0.9), nothing is downloaded or stored locally.
 
 ```bash
-go run github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@v2.8.2 -config oapi-codegen.yaml openapi.yaml
+go run github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@v2.8.2 -config oapi-codegen.yaml https://github.com/elabftw/elabftw/releases/download/6.0.9/openapi.yaml
 go mod tidy
 ```
