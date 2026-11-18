@@ -1,4 +1,4 @@
-module github.com/elabftw/elabapi-go
+module github.com/elabftw/elabapi-go/v6
 
 go 1.27.4
 
