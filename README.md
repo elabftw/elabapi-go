@@ -25,6 +25,10 @@ import "github.com/elabftw/elabapi-go/v6/elabapi"
 
 The module is `github.com/elabftw/elabapi-go/v6` and the package lives in its `elabapi/` directory.
 
+# Using an AI assistant
+
+If you write your scripts with an AI assistant, ask it to read [AGENTS.md](https://github.com/elabftw/elabapi-go/blob/master/AGENTS.md) first: it explains how to use this library and its pitfalls.
+
 # Dev
 
 ## Layout
